@@ -1,0 +1,108 @@
+html {
+	height: 100%;
+	font-size: 62.5%;
+
+	@include device-width(10) {
+		font-size: 61%;
+	}
+
+	@include device-width(9) {
+		font-size: 60%;
+	}
+
+	@include device-width(8) {
+		font-size: 59%;
+	}
+
+	@include device-width(7) {
+		font-size: 58%;
+	}
+
+	@include device-width(6) {
+		font-size: 57%;
+	}
+
+	@include device-width(5) {
+		font-size: 56%;
+	}
+
+	@include device-width(4) {
+		font-size: 55%;
+	}
+}
+
+body {
+	height: 100%;
+	color: #030303;
+	@include font-size(14);
+	-webkit-font-smoothing: antialiased;	
+}
+
+#connected-home {
+	overflow: hidden;
+	background: #ccc;
+	position: relative;
+	margin: 0 auto;
+
+	.inner {
+		position: relative;
+	}
+
+	.span.ten {
+		padding-bottom: 45px;
+		background: #fff;
+	}
+
+	.section-navigation-container {
+		width: 100%;
+		position: absolute;
+		bottom: 0px;
+		height: 43px;
+		background: #000;
+		text-align: center;
+		z-index: 50;
+
+		.home {
+			float: left;
+			color: #FFF;
+		}
+
+		.section-navigation {
+			list-style: none;
+			width: 100%;
+			padding: 0;
+			margin: 0;
+
+			li {
+				list-style: none;
+				height: 75px;
+				width: 100%;
+				margin: 0;
+
+				a {
+
+				}		
+			}		
+		}	
+	}
+
+	.sections {
+		position: relative;
+		height: 100%;
+		width: 100%;
+	
+		.section {
+			position: relative;
+			width: 100%;
+			height: 100%;
+			display: none;
+			background: #FFF;
+			text-align: center;
+
+			img.background {
+				margin: 0 auto;
+			}
+		}
+	}	
+}
+	

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Virgin Media - Connected Home</title>
+    <link rel="stylesheet" href="css/app.css" type="text/css" media="screen">
+
+    <script type="text/javascript" src="js/libs/jquery.min.js"></script>
+    <script type="text/javascript" src="js/plugins/jquery.rwdimagemaps.min.js"></script>
+    <script type="text/javascript" src="js/plugins/jquery.maphilight.min.js"></script>
+    <script type="text/javascript" src="js/jquery.connected.home.js"></script>
+</head>
+<body>
+<!--[if lt IE 7]><div id="connected-home" class="clearfix ie6 oldie" > <![endif]-->
+<!--[if IE 7]><div id="connected-home" class="clearfix no-js ie7 oldie" > <![endif]-->
+<!--[if IE 8]><div id="connected-home" class="clearfix no-js ie8 oldie" > <![endif]-->
+<!--[if gt IE 8]><!--><div id="connected-home" class="clearfix"><!--<![endif]-->
+    <div class="container">
+        <div class="span ten clearfix">
+        	<div class="section-navigation-container">
+                <a class="section-btn home" data-item-id="0" data-section-id="0" >Home</a>
+                <ul class="section-navigation">
+                    <li>
+                        <a class="section-btn button" data-item-id="1" data-section-id="1" >Outside</a>
+                        <a class="section-btn button" data-item-id="2" data-section-id="2" >Downstairs</a>
+                        <a class="section-btn button" data-item-id="3" data-section-id="3" >Upstairs</a>
+                    </li>
+                </ul>
+            </div>            
+            <div class="sections clearfix">
+                <div class="section item0 current" data-item-id="0">
+                    <img class="scale background" src="/images/home_bg.jpg" alt="">
+                </div>            
+                <div class="section item1" data-item-id="1">
+                    <img class="scale background" src="/images/outside_bg.jpg" alt="">
+                </div>
+                <div class="section item2" data-item-id="2">
+                    <img class="map scale background" src="/images/downstairs_bg.jpg" usemap="downstairs" border="0" width="475" height="600" alt="" />
+                    <map name="downstairs">
+                        <area shape="poly" alt="" title="" coords="112,382,298,215,267,192,232,223,211,204,59,335,75,349" href="" target="" class="{fillColor:'00ff00'}"/>
+                        <area shape="poly" alt="" title="" coords="97,401,191,488,208,471,226,490,285,428,174,332" href="" target="" />
+                        <area shape="poly" alt="" title="" coords="287,424,469,237,309,127,244,179,298,215,171,328" href="" target="" />
+                    </map>
+                </div>
+                <div class="section item3" data-item-id="3">
+                    <img class="scale background" src="/images/upstairs_bg.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    $(function() {
+        $("#connected-home").connectedHome();
+        $('.map').maphilight({fade: false});
+    });
+</script>
+</body>
+</html>
