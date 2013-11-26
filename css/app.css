@@ -552,7 +552,7 @@ hr {
 
 /* line 272, scss/_classes.scss */
 .scale {
-  height: auto !important;
+  height: auto;
   max-width: 100%;
   display: block; }
 

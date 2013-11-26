@@ -6,8 +6,7 @@
     <link rel="stylesheet" href="css/app.css" type="text/css" media="screen">
 
     <script type="text/javascript" src="js/libs/jquery.min.js"></script>
-    <script type="text/javascript" src="js/plugins/jquery.rwdimagemaps.min.js"></script>
-    <script type="text/javascript" src="js/plugins/jquery.maphilight.min.js"></script>
+    <script type="text/javascript" src="js/plugins/jquery.maphilight.js"></script>
     <script type="text/javascript" src="js/jquery.connected.home.js"></script>
 </head>
 <body>
@@ -35,11 +34,11 @@
                     <img class="scale background" src="/images/outside_bg.jpg" alt="">
                 </div>
                 <div class="section item2" data-item-id="2">
-                    <img class="map scale background" src="/images/downstairs_bg.jpg" usemap="downstairs" border="0" width="475" height="600" alt="" />
-                    <map name="downstairs">
-                        <area shape="poly" alt="" title="" coords="112,382,298,215,267,192,232,223,211,204,59,335,75,349" href="" target="" class="{fillColor:'00ff00'}"/>
-                        <area shape="poly" alt="" title="" coords="97,401,191,488,208,471,226,490,285,428,174,332" href="" target="" />
-                        <area shape="poly" alt="" title="" coords="287,424,469,237,309,127,244,179,298,215,171,328" href="" target="" />
+                    <img class="map scale background center" src="/images/downstairs_bg.jpg" usemap="#downstairs" border="0" width="475" height="600" alt="" />
+                    <map name="downstairs" id="downstairs">
+                        <area data-key="AZ" shape="poly" alt="" title="" coords="112,382,298,215,267,192,232,223,211,204,59,335,75,349" href="" target="" class="{fillColor:'00ff00'}"/>
+                        <area data-key="AB" shape="poly" alt="" title="" coords="97,401,191,488,208,471,226,490,285,428,174,332" href="" target="" />
+                        <area data-key="AC" shape="poly" alt="" title="" coords="287,424,469,237,309,127,244,179,298,215,171,328" href="" target="" />
                     </map>
                 </div>
                 <div class="section item3" data-item-id="3">
@@ -52,8 +51,32 @@
 <script type="text/javascript">
     $(function() {
         $("#connected-home").connectedHome();
-        $('.map').maphilight({fade: false});
-    });
+
+        jQuery.fn.maphilight.defaults = {
+            fill: true,
+            fillColor: 'CA0000',
+            fillOpacity: 0.7,
+            stroke: true,
+            strokeColor: 'FFFFFF',
+            strokeOpacity: 0,
+            strokeWidth: 0,
+            fade: true,
+            alwaysOn: false,
+            neverOn: false,
+            groupBy: false,
+            wrapClass: true,
+            shadow: true,
+            shadowX: 0,
+            shadowY: 0,
+            shadowRadius: 6,
+            shadowColor: '000000',
+            shadowOpacity: 0.8,
+            shadowPosition: 'outside',
+            shadowFrom: false
+        }
+        
+        jQuery('.map').maphilight({fade: true});
+});
 </script>
 </body>
 </html>
