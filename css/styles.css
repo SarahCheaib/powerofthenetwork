@@ -1,0 +1,287 @@
+/* line 38, scss/styles.scss */
+body {
+  background: #000;
+  margin: 0;
+  padding: 0;
+  font-size: 12px; }
+
+/* line 45, scss/styles.scss */
+#connected-home {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 300;
+  background: #FFF;
+  position: relative;
+  margin: 0 auto;
+  max-width: 940px; }
+  /* line 55, scss/styles.scss */
+  #connected-home h1, #connected-home h2, #connected-home h3, #connected-home h4, #connected-home h5, #connected-home h6 {
+    font-weight: 300; }
+  /* line 76, scss/styles.scss */
+  #connected-home .italic {
+    font-style: italic; }
+  /* line 80, scss/styles.scss */
+  #connected-home .red {
+    color: #8a0000; }
+  /* line 84, scss/styles.scss */
+  #connected-home .text-center {
+    text-align: center; }
+  /* line 88, scss/styles.scss */
+  #connected-home .grey {
+    color: #b1b1b1; }
+  /* line 93, scss/styles.scss */
+  #connected-home a {
+    cursor: pointer;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease; }
+  /* line 99, scss/styles.scss */
+  #connected-home area:hover {
+    background: #FFF; }
+  /* line 107, scss/styles.scss */
+  #connected-home .btn,
+  #connected-home .grey-btn {
+    text-align: left;
+    font-style: italic;
+    color: #FFF;
+    position: relative;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease; }
+    /* line 141, scss/styles.scss */
+    #connected-home .btn.selected,
+    #connected-home .grey-btn.selected {
+      background: #000;
+      border: 1px solid #666;
+      -webkit-box-shadow: none;
+      -moz-box-shadow: none;
+      box-shadow: none; }
+      /* line 145, scss/styles.scss */
+      #connected-home .btn.selected .icon,
+      #connected-home .grey-btn.selected .icon {
+        background: none;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+        border-right: 1px solid #666; }
+    /* line 156, scss/styles.scss */
+    #connected-home .btn.has-icon,
+    #connected-home .grey-btn.has-icon {
+      padding-left: 50px; }
+    /* line 160, scss/styles.scss */
+    #connected-home .btn .icon,
+    #connected-home .grey-btn .icon {
+      font-style: normal;
+      -webkit-border-radius: 3px 0 0 3px;
+      -moz-border-radius: 3px 0 0 3px;
+      -ms-border-radius: 3px 0 0 3px;
+      -o-border-radius: 3px 0 0 3px;
+      border-radius: 3px 0 0 3px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #8b0000), color-stop(100%, #b80000));
+      background: -webkit-linear-gradient(top, #8b0000, #b80000);
+      background: -moz-linear-gradient(top, #8b0000, #b80000);
+      background: -o-linear-gradient(top, #8b0000, #b80000);
+      background: linear-gradient(top, #8b0000, #b80000);
+      width: 2.8em;
+      text-align: center;
+      -webkit-box-shadow: inset -2px 0 2px rgba(0, 0, 0, 0.5);
+      -moz-box-shadow: inset -2px 0 2px rgba(0, 0, 0, 0.5);
+      box-shadow: inset -2px 0 2px rgba(0, 0, 0, 0.5);
+      font-family: "HelveticaNeue-Bold", "Helvetica Neue Bold", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+      font-weight: 600;
+      overflow: hidden; }
+      /* line 175, scss/styles.scss */
+      #connected-home .btn .icon img,
+      #connected-home .grey-btn .icon img {
+        max-width: 100%;
+        height: auto; }
+      /* line 180, scss/styles.scss */
+      #connected-home .btn .icon.number,
+      #connected-home .grey-btn .icon.number {
+        line-height: 2.6em;
+        -webkit-box-shadow: inset 1px 0 2px #c20000, inset -2px 0 2px rgba(0, 0, 0, 0.5);
+        -moz-box-shadow: inset 1px 0 2px #c20000, inset -2px 0 2px rgba(0, 0, 0, 0.5);
+        box-shadow: inset 1px 0 2px #c20000, inset -2px 0 2px rgba(0, 0, 0, 0.5); }
+        /* line 183, scss/styles.scss */
+        #connected-home .btn .icon.number:before,
+        #connected-home .grey-btn .icon.number:before {
+          content: '';
+          border: 2px solid #FFF;
+          width: 1.3em;
+          height: 1.3em;
+          display: block;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          -webkit-border-radius: 50%;
+          -moz-border-radius: 50%;
+          -ms-border-radius: 50%;
+          -o-border-radius: 50%;
+          border-radius: 50%;
+          margin: -0.8em 0 0 -0.85em; }
+  /* line 199, scss/styles.scss */
+  #connected-home .grey-btn {
+    background: #3a3a3a;
+    *zoom: 1;
+    filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FF3A3A3A', endColorstr='#FF870000');
+    background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #3a3a3a), color-stop(50%, #3a3a3a), color-stop(51%, #2a2a2a), color-stop(100%, #2a2a2a));
+    background: -webkit-linear-gradient(top, #3a3a3a 0%, #3a3a3a 50%, #2a2a2a 51%, #2a2a2a 100%);
+    background: -moz-linear-gradient(top, #3a3a3a 0%, #3a3a3a 50%, #2a2a2a 51%, #2a2a2a 100%);
+    background: -o-linear-gradient(top, #3a3a3a 0%, #3a3a3a 50%, #2a2a2a 51%, #2a2a2a 100%);
+    background: linear-gradient(top, #3a3a3a 0%, #3a3a3a 50%, #2a2a2a 51%, #2a2a2a 100%);
+    -webkit-box-shadow: inset 0px -1px 2px #3a3a3a;
+    -moz-box-shadow: inset 0px -1px 2px #3a3a3a;
+    box-shadow: inset 0px -1px 2px #3a3a3a; }
+    /* line 205, scss/styles.scss */
+    #connected-home .grey-btn .icon {
+      background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #292929), color-stop(100%, #373737));
+      background: -webkit-linear-gradient(top, #292929, #373737);
+      background: -moz-linear-gradient(top, #292929, #373737);
+      background: -o-linear-gradient(top, #292929, #373737);
+      background: linear-gradient(top, #292929, #373737); }
+  /* line 210, scss/styles.scss */
+  #connected-home .circle-btn {
+    background: #c20000;
+    border: 3px solid #FFF;
+    display: inline-block;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+    width: 2em;
+    height: 2em;
+    line-height: 1.9em;
+    text-align: center;
+    color: #FFF;
+    font-family: "HelveticaNeue-Bold", "Helvetica Neue Bold", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight: 600; }
+    /* line 231, scss/styles.scss */
+    #connected-home .circle-btn:hover {
+      background: #646464; }
+  /* line 238, scss/styles.scss */
+  #connected-home img {
+    height: auto;
+    max-width: 100%; }
+  /* line 244, scss/styles.scss */
+  #connected-home .clearfix:before,
+  #connected-home .clearfix:after {
+    content: " ";
+    /* 1 */
+    display: table;
+    /* 2 */ }
+  /* line 249, scss/styles.scss */
+  #connected-home .clearfix:after {
+    clear: both; }
+  /* line 253, scss/styles.scss */
+  #connected-home .clearfix {
+    *zoom: 1; }
+  /* line 258, scss/styles.scss */
+  #connected-home .sections {
+    position: relative; }
+    /* line 261, scss/styles.scss */
+    #connected-home .sections .section {
+      position: relative;
+      background: #FFF;
+      display: none;
+      overflow: hidden; }
+      /* line 266, scss/styles.scss */
+      #connected-home .sections .section.current {
+        display: block; }
+      /* line 270, scss/styles.scss */
+      #connected-home .sections .section .content {
+        z-index: 200;
+        padding: 0 2.5em; }
+      /* line 275, scss/styles.scss */
+      #connected-home .sections .section .image-mask {
+        position: relative; }
+      /* line 279, scss/styles.scss */
+      #connected-home .sections .section .image {
+        left: 0;
+        position: relative; }
+        /* line 302, scss/styles.scss */
+        #connected-home .sections .section .image img {
+          display: block; }
+        /* line 305, scss/styles.scss */
+        #connected-home .sections .section .image .overlay {
+          top: 0;
+          left: 0; }
+        /* line 311, scss/styles.scss */
+        #connected-home .sections .section .image .tooltip-btn {
+          position: absolute; }
+  /* line 318, scss/styles.scss */
+  #connected-home .footer {
+    background: #000;
+    position: relative; }
+    /* line 321, scss/styles.scss */
+    #connected-home .footer .section-navigation-container {
+      padding: 1em;
+      display: none; }
+      @media only screen and (max-width: 767px) {
+        /* line 321, scss/styles.scss */
+        #connected-home .footer .section-navigation-container {
+          display: block; } }
+    /* line 329, scss/styles.scss */
+    #connected-home .footer .main-navigation-container {
+      background: #1a1a1a;
+      padding: 1em; }
+      /* line 333, scss/styles.scss */
+      #connected-home .footer .main-navigation-container .title {
+        display: none; }
+        @media only screen and (max-width: 767px) {
+          /* line 333, scss/styles.scss */
+          #connected-home .footer .main-navigation-container .title {
+            display: block; } }
+    /* line 342, scss/styles.scss */
+    #connected-home .footer .home-btn {
+      position: absolute;
+      top: 0px;
+      left: 0;
+      z-index: 200; }
+    /* line 349, scss/styles.scss */
+    #connected-home .footer .navigation {
+      text-align: center; }
+      /* line 351, scss/styles.scss */
+      #connected-home .footer .navigation ul {
+        display: inline-block;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        text-align: center; }
+        @media only screen and (max-width: 767px) {
+          /* line 351, scss/styles.scss */
+          #connected-home .footer .navigation ul {
+            text-align: left;
+            display: block; } }
+        /* line 363, scss/styles.scss */
+        #connected-home .footer .navigation ul li {
+          margin: 0.4em 0.6em;
+          float: left;
+          width: 15em; }
+          @media only screen and (max-width: 767px) {
+            /* line 363, scss/styles.scss */
+            #connected-home .footer .navigation ul li {
+              float: none;
+              width: auto;
+              margin-top: 1.2em;
+              margin-bottom: 1.2em; } }
+          /* line 375, scss/styles.scss */
+          #connected-home .footer .navigation ul li.home {
+            display: none;
+            margin-top: 2.5em; }
+            @media only screen and (max-width: 767px) {
+              /* line 375, scss/styles.scss */
+              #connected-home .footer .navigation ul li.home {
+                display: block; } }
+            /* line 383, scss/styles.scss */
+            #connected-home .footer .navigation ul li.home a .icon img {
+              width: 50%;
+              margin-top: 0.8em; }
+          /* line 393, scss/styles.scss */
+          #connected-home .footer .navigation ul li a {
+            display: block; }

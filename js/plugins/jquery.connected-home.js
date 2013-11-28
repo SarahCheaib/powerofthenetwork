@@ -1,8 +1,7 @@
 ;(function ( $, window, document, undefined ) {
 
-    var pluginName = "connectedHome",
+    var pluginName = 'connectedHome',
         defaults = {
-        	propertyName: "value"
     	}; 
 
     function Plugin ( element, options ) {
@@ -28,8 +27,8 @@
 
 			var main = this;
 
-			this.sectionBtn.on('click', function(event) {
-				event.preventDefault();
+			this.sectionBtn.on('click', function(e) {
+				e.preventDefault();
 				var id = $(this).data('item-id');
 				main.gotoSection(id);
 			});
