@@ -18,15 +18,29 @@
     		init: function(){
     			var sections = plugin.sections;
     			sections.section = $('.section', plugin.element);
-    			
+    			var id = sections.section.filter(':first-child').data('id');
+
+    			sections.section.on('enter', function(e){
+    				var section = $(this);
+    				section.addClass('current');
+    				section.addClass('enter');
+    				section.one('webkitAnimationEnd oanimationend msAnimationEnd animationend', section.trigger('ready'));
+    			}).on('ready', function(){
+    				console.log('ready')
+    				// var section = $(this);
+    				// section.addClass('current');
+    			});
+    			// sections.section.enter = function(){
+    			// 	console.log(this);
+    			// } 
     			//console.log(sections.section);
     			// var id = sections.elements.filter(':first-child').data('id');
-    			// sections.goto(id);
+    			//sections.goto(id);
 
     			// sections.elements.on('enter', function(){
     			// 	console.log(this);
     			// });
-
+				sections.goto(id);
     		},
     		section: {
     			enter: function(){
@@ -39,7 +53,9 @@
 	    		}
     		},
     		goto: function(id){
-    			section = sections.elements.filter('[data-id=' + id + ']');
+    			var sections = plugin.sections;
+    			section = sections.section.filter('[data-id=' + id + ']');
+    			section.trigger('enter');
     		},
     		
     	}

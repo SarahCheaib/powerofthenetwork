@@ -1,4 +1,4 @@
-
+@import 'compass/css3';
 
 @mixin device-width($device){
 	$width: 0;
@@ -33,7 +33,46 @@
 	font-weight: 600;
 }
 
-@import 'compass/css3';
+// @mixin keyframes(
+// 	$name,
+// 	$moz: $experimental-support-for-mozilla,
+// 	$webkit: $experimental-support-for-webkit,
+// 	$o: $experimental-support-for-opera,
+// 	$ms: $experimental-support-for-microsoft,
+// 	$khtml: $experimental-support-for-khtml,
+// 	$official: true
+// 	) {
+// 	@if $moz {
+// 		@include with-only-support-for($moz: true) {
+// 			@-moz-keyframes #{$name} { @content; }
+// 		}
+// 	}
+// 	@if $webkit {
+// 		@include with-only-support-for($webkit: true) {
+// 			@-webkit-keyframes #{$name} { @content; }
+// 		}
+// 	}
+// 	@if $o {
+// 		@include with-only-support-for($o: true) {
+// 			@-o-keyframes #{$name} { @content; }
+// 		}
+// 	}
+// 	@if $ms {
+// 		@include with-only-support-for($ms: true) {
+// 			@-ms-keyframes #{$name} { @content; }
+// 		}
+// 	}
+// 	@if $khtml {
+// 		@include with-only-support-for($khtml: true) {
+// 			@-khtml-keyframes #{$name} { @content; }
+// 		}
+// 	}
+// 	@if $official {
+// 		@include with-only-support-for {
+// 			@keyframes #{$name} { @content; }
+// 		}
+// 	}
+// }
 
 body {
 	background: #000;
@@ -54,24 +93,27 @@ body {
 
 	h1, h2, h3, h4, h5, h6 {
 		font-weight: 300;
-		//margin: 1em 0;
 	}
 
-	// h3 {
-	// 	@include font-size(25);
-	// }
+	h3 {
+		font-size: 25px;
+		margin: 10px;
+	}
 
-	// h4 {
-	// 	@include font-size(20);
-	// }
+	h4 {
+		font-size: 20px;
+		margin: 10px;
+	}
 
-	// h5 {
-	// 	@include font-size(18);//can be changed
-	// }
+	h5 {
+		font-size: 18px;//can be changed
+		margin: 10px;
 
-	// b, strong {
-	// 	@include helvetica-bold;
-	// }
+	}
+
+	b, strong {
+		@include helvetica-bold;
+	}
 
 	.italic {
 		font-style: italic;
@@ -103,13 +145,34 @@ body {
 
 	// Buttons
 
-	.btn,
-	.grey-btn {
+	.btn-primary {
+		.icon {
+			background: #8b0000;
+			@include background(linear-gradient(top, #8b0000, #b80000));
+		}
+	}
+
+	.btn-secondary {
+		background: #3a3a3a;
+		@include background(linear-gradient(top, #3a3a3a 0%, #2a2a2a 100%));
+		color: #FFF;
+
+		&:hover {
+			@include background(linear-gradient(top, #2a2a2a 0%, #3a3a3a 100%));
+		}
+
+		.icon {
+			background: #292929;
+			@include background(linear-gradient(top, #292929, #373737));
+		}
+	}
+
+	.btn {
 		text-align: left;
 		// line-height: 1;
 		// cursor: pointer;
 		font-style: italic;
-		color: #FFF;
+		//color: #FFF;
 		//padding: 0.6em 0.8em; 
 		position: relative;
 		//letter-spacing: 1px;
@@ -124,18 +187,6 @@ body {
 
 		@include device-width(tablet) {
 
-		}
-
-		&:hover {
-			//@include box-shadow(inset 0px -1px 2px #646464);
-
-			.icon {
-				// @include background(linear-gradient(top, #292929, #373737));
-				// @include box-shadow(inset -2px 0 2px rgba(0, 0, 0, 0.5));
-				// &.number {
-				// 	@include box-shadow(inset 1px 0 2px #3a3a3a, inset -2px 0 2px rgba(0, 0, 0, 0.5));
-				// }
-			}
 		}
 
 		&.selected {
@@ -164,9 +215,8 @@ body {
 			top: 0;
 			left: 0;
 			height: 100%;
-			@include background(linear-gradient(top, #8b0000, #b80000));
-			//font-size: 0.8em;
-			width: 2.8em;
+			font-size: 0.9em;
+			width: 36px;
 			text-align: center;
 			@include box-shadow(inset -2px 0 2px rgba(#000, 0.5));
 			@include helvetica-bold;
@@ -178,46 +228,39 @@ body {
 			}
 
 			&.number {
-				line-height: 2.6em;
+				line-height: 2.6;
 				@include box-shadow(inset 1px 0 2px #c20000, inset -2px 0 2px rgba(0, 0, 0, 0.5));
 				&:before {
 					content: '';
 					border: 2px solid #FFF;
-					width: 1.3em;
-					height: 1.3em;
+					width: 16px;
+					height: 16px;
 					display: block;
 					position: absolute;
 					top: 50%;
 					left: 50%;
 					@include border-radius(50%);
-					margin: -0.8em 0 0 -0.85em; 
+					margin: -10px 0 0 -10px; 
 				}
 			}
 		}
 	}
 
-	.grey-btn {
-		background: #3a3a3a;
-		@include filter-gradient(#3a3a3a, #870000, vertical);
-		@include background(linear-gradient(top, #3a3a3a 0%, #3a3a3a 50%, #2a2a2a 51%, #2a2a2a 100%));
-		@include box-shadow(inset 0px -1px 2px #3a3a3a);
-
-		.icon {
-			@include background(linear-gradient(top, #292929, #373737));
-		}
-	}
-
+	
 	.circle-btn {
-		background: #c20000;
-		border: 3px solid #FFF;
+		@include box-shadow(1px 1px 1px rgba(#000, 0.5));
+		padding: 0;
+		//background: #c20000;
+		border: 2px solid #FFF;
 		display: inline-block;
 		@include border-radius(50%);
-		width: 2em;
-		height: 2em;
-		line-height: 1.9em;
+		width: 40px;
+		height: 40px;
+		line-height: 40px;
 		text-align: center;
 		color: #FFF;
 		@include helvetica-bold;
+		font-size: 18px;
 		//@include font-size(20);
 
 		@include device-width(tablet) {
@@ -229,7 +272,7 @@ body {
 		}
 
 		&:hover {
-			background: #646464;
+		//	background: #646464;
 		}
 	}
 
@@ -266,6 +309,19 @@ body {
 			&.current {
 				display: block;
 			}
+
+			&.enter {
+				
+				//animation: 
+			}
+
+			// @keyframes enter {
+
+			//     to {
+			//     	opacity: 1;
+			//     }
+
+			// }
 
 			.content {
 				z-index: 200;
@@ -382,7 +438,7 @@ body {
 							.icon {
 								img {
 									width: 50%;
-									margin-top: 0.8em;
+									margin-top: 8px;
 								}
 							}
 						}
