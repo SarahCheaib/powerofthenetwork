@@ -7,47 +7,38 @@
     <link rel="stylesheet" href="css/styles.css" type="text/css" media="screen" />
 
     <script type="text/javascript" src="js/libs/jquery.min.js"></script>
+    <script type="text/javascript" src="js/libs/modernizr.min.js"></script>
     <script type="text/javascript" src="js/plugins/jquery.maphilight.js"></script>
     <script type="text/javascript" src="js/plugins/jquery.rwdimagemaps.min.js"></script>
     <script type="text/javascript" src="js/jquery.connected-home.js"></script>
 </head>
 <body>
-<!--[if lt IE 7]><div id="connected-home" class="clearfix ie6 oldie" > <![endif]-->
-<!--[if IE 7]><div id="connected-home" class="clearfix no-js ie7 oldie" > <![endif]-->
-<!--[if IE 8]><div id="connected-home" class="clearfix no-js ie8 oldie" > <![endif]-->
-<!--[if gt IE 8]><!--><div id="connected-home" class="clearfix"><!--<![endif]-->
+<div id="connected-home" class="clearfix">
+    <header class="header">
+        <a class="section-btn home-btn" data-id="0"></a>
+        <a class="section-btn info-btn"></a>
+    </header>
 	<div class="sections clearfix">
         <div class="section" data-id="0">
 
-<!--             <div class="content" style="position: absolute;">
-                <h3 class="title">You won’t believe some of the amazing things you can do she you connect your devices to our super fast broadband and the <b>Virgin Media Super Hub.</b></h3>
+             <div class="content" style="position: absolute; top: 20px;">
+                <h3 class="title hidden-tablet hidden-phone">You won’t believe some of the amazing things you can do she you connect your devices to our super fast broadband and the <b>Virgin Media Super Hub.</b></h3>
 
-                <h4 class="red">Come inside our connected home and let us show you.</h4>
-                <p><a class="section-btn btn small">Explore</a>
+                <h4 class="red hidden-phone">Come inside our connected home<br />and let us show you.</h4>
+                <p><a class="section-btn btn-primary btn small" data-id="100">Explore</a>
             </div>
             <div class="image">
                 <img class="scale" src="images/misc/home.jpg" />
             </div>
- -->
-            <div class="image-mask">
-                <div class="image">
-                    <a class="tooltip-btn btn btn-primary circle-btn" data-id="111" style="top: 2%; left: 4%;">1</a>
-                    <img src="images/rooms/living_room.jpg" />
-                </div>
-            </div>
-            
-                <!--img src="images/overlays/living_room.png" class="overlay" style="top: 20%; left: 20%;" data-id="4" /-->
-<!--                 <img class="scale" src="images/misc/home.jpg" /> -->
-                
-                <!-- <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                     <polygon class="overlay" data-id="4" id="" fill="#CC0000" points="187.1,124.05 158.8,153.95 163.05,158.2 114.35,206.95 0,110.4 126.8,0 126.8,7.2 133.95,13.25 133.95,51.2 210.75,108.5 190.65,129.7 "/>
-                </svg> -->
         </div>
         <div class="section" data-id="100">
             <div class="content">
                  <h3 class="title text-center">You're downstairs</h3>
             </div>
-            <div style="margin-top: 12em;">
+            <div class="image-container" style="width: 448px;">
+                <a class="section-btn btn-primary btn small" data-id="110" style="top: 20%; left: 20%;">Living Room</a>
+                <a class="section-btn btn-primary btn small" data-id="120" style="top: 45%; left: 0%;">Study</a>
+                <a class="section-btn btn-primary btn small" data-id="130" style="top: 2%; left: 85%;">Kitchen</a>
                 <img class="image" src="images/floors/downstairs.png" width="448" height="460" usemap="#downstairs-img" />
                 <map class="map" name="downstairs-img">
                     <area shape="poly" title="Living Room" href="#" coords="284,301,170,204,297,92,297,99,304,105,304,113,294,123,304,131,303,143,380,201,362,220,358,216,328,246,332,251,284,301,284,301" class="section-btn" data-id="110" />
@@ -55,13 +46,157 @@
                     <area shape="poly" title="Kitchen" href="#" coords="247,54,297,92,296,100,303,105,304,114,294,124,303,131,303,143,378,200,380,201,407,173,408,174,467,113,307,6,284,21" class="section-btn" data-id="130" />
                     
                 </map>
+
+                                <!--img src="images/overlays/living_room.png" class="overlay" style="top: 20%; left: 20%;" data-id="4" /-->
+<!--                 <img class="scale" src="images/misc/home.jpg" /> -->
+                
+                <!-- <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                     <polygon class="overlay" data-id="4" id="" fill="#CC0000" points="187.1,124.05 158.8,153.95 163.05,158.2 114.35,206.95 0,110.4 126.8,0 126.8,7.2 133.95,13.25 133.95,51.2 210.75,108.5 190.65,129.7 "/>
+                </svg> -->
             </div>
         </div>
 
         <div class="section" data-id="110">
             <div class="image-mask">
                 <div class="image">
-                    <img src="images/rooms/living_room.jpg" />
+                    <img src="images/rooms/living_room.jpg" class="scale" />
+                </div>
+            </div>
+            <div class="tooltips">
+                <div class="tooltip" style="top: 78%; left: 22%;" data-id="111">
+                    <a class="tooltip-btn btn btn-primary circle-btn" data-id="111">1</a>
+                    <div class="circle" style="background: url(images/highlights/living_room.jpg) 0 0;"></div>
+                    <div class="content">
+                        <a class="circle-btn btn btn-primary close-btn"></a>
+                        <h4>Lorem ipsum dolor sit amet</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></div>
+                </div>
+           
+                <div class="tooltip" style="top: 54%; left: 31%;" data-id="112">
+                    <a class="tooltip-btn btn btn-primary circle-btn" data-id="112">2</a>
+                    <div class="circle" style="background: url(images/highlights/living_room.jpg) -160px 0;"></div>
+                    <div class="content">
+                        <a class="circle-btn btn btn-primary close-btn"></a>
+                        <h4>Lorem ipsum dolor sit amet</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </div>
+                </div>
+                <div class="tooltip" style="top: 60%; left: 36%;" data-id="113">
+                    <a class="tooltip-btn btn btn-primary circle-btn" data-id="113">3</a>
+                    <div class="circle" style="background: url(images/highlights/living_room.jpg) -320px 0;"></div>
+                    <div class="content">
+                        <a class="circle-btn btn btn-primary close-btn"></a>
+                        <h4>Lorem ipsum dolor sit amet</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </div>
+                </div>
+                <div class="tooltip" style="top: 40%; left: 49%;" data-id="114">
+                    <a class="tooltip-btn btn btn-primary circle-btn" data-id="114">4</a>
+                    <div class="circle" style="background: url(images/highlights/living_room.jpg) -480px 0;"></div>
+                    <div class="content">
+                        <a class="circle-btn btn btn-primary close-btn"></a>
+                        <h4>Lorem ipsum dolor sit amet</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </div>
+                </div>
+                <div class="tooltip" style="top: 60%; left: 54%;" data-id="115">
+                    <a class="tooltip-btn btn btn-primary circle-btn" data-id="115">5</a>
+                    <div class="circle" style="background: url(images/highlights/living_room.jpg) -640px 0;"></div>
+                    <div class="content">
+                        <a class="circle-btn btn btn-primary close-btn"></a>
+                        <h4>Lorem ipsum dolor sit amet</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </div>
+                </div>
+                <div class="tooltip" style="top: 44%; left: 73%;" data-id="116">
+                    <a class="tooltip-btn btn btn-primary circle-btn" data-id="116">6</a>
+                    <div class="circle" style="background: url(images/highlights/living_room.jpg) -800px 0;"></div>
+                    <div class="content">
+                        <a class="circle-btn btn btn-primary close-btn"></a>
+                        <h4>Lorem ipsum dolor sit amet</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section" data-id="120">
+            <div class="image-mask">
+                <div class="image">
+                    <img src="images/rooms/study.jpg" class="scale" />
+                </div>
+            </div>
+            <div class="tooltips">
+                <div class="tooltip" style="top: 54%; left: 26%;" data-id="121">
+                    <a class="tooltip-btn btn btn-primary circle-btn" data-id="121">1</a>
+                    <div class="circle"></div>
+                    <div class="content">
+                        <a class="circle-btn btn btn-primary close-btn"></a>
+                        <h4>Lorem ipsum dolor sit amet</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></div>
+                </div>
+           
+                <div class="tooltip" style="top: 45%; left: 45%;" data-id="122">
+                    <a class="tooltip-btn btn btn-primary circle-btn" data-id="122">2</a>
+                    <div class="circle"></div>
+                    <div class="content">
+                        <a class="circle-btn btn btn-primary close-btn"></a>
+                        <h4>Lorem ipsum dolor sit amet</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </div>
+                </div>
+                <div class="tooltip" style="top: 54%; left: 63%;" data-id="123">
+                    <a class="tooltip-btn btn btn-primary circle-btn" data-id="123">3</a>
+                    <div class="circle"></div>
+                    <div class="content">
+                        <a class="circle-btn btn btn-primary close-btn"></a>
+                        <h4>Lorem ipsum dolor sit amet</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section" data-id="130">
+            <div class="image-mask">
+                <div class="image">
+                    <img src="images/rooms/kitchen.jpg" class="scale" />
+                </div>
+            </div>
+            <div class="tooltips">
+                <div class="tooltip" style="top: 54%; left: 43%;" data-id="131">
+                    <a class="tooltip-btn btn btn-primary circle-btn" data-id="131">1</a>
+                    <div class="circle"></div>
+                    <div class="content">
+                        <a class="circle-btn btn btn-primary close-btn"></a>
+                        <h4>Lorem ipsum dolor sit amet</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></div>
+                </div>
+           
+                <div class="tooltip" style="top: 68%; left: 50%;" data-id="132">
+                    <a class="tooltip-btn btn btn-primary circle-btn" data-id="132">2</a>
+                    <div class="circle"></div>
+                    <div class="content">
+                        <a class="circle-btn btn btn-primary close-btn"></a>
+                        <h4>Lorem ipsum dolor sit amet</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </div>
+                </div>
+                <div class="tooltip" style="top: 68%; left: 61%;" data-id="133">
+                    <a class="tooltip-btn btn btn-primary circle-btn" data-id="133">3</a>
+                    <div class="circle"></div>
+                    <div class="content">
+                        <a class="circle-btn btn btn-primary close-btn"></a>
+                        <h4>Lorem ipsum dolor sit amet</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </div>
+                </div>
+                <div class="tooltip" style="top: 10%; left: 71%;" data-id="134">
+                    <a class="tooltip-btn btn btn-primary circle-btn" data-id="134">4</a>
+                    <div class="circle"></div>
+                    <div class="content">
+                        <a class="circle-btn btn btn-primary close-btn"></a>
+                        <h4>Lorem ipsum dolor sit amet</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -69,19 +204,99 @@
             <div class="content">
                  <h3 class="title text-center">You're upstairs</h3>
             </div>
-            <div class="image">
-                <img class="scale" src="images/floors/upstairs.png" />
+            <div class="image-container" style="width: 448px;">
+                <a class="section-btn btn-primary btn small" data-id="210" style="top: 45%; left: 0%;">Master Bedroom</a>
+                <a class="section-btn btn-primary btn small" data-id="220" style="top: 20%; left: 20%;">Kids Bedroom</a>
+                <img class="image" src="images/floors/upstairs.png" width="448" height="460" usemap="#upstairs-img" />
+                <map class="map" name="upstairs-img">
+                    <area shape="poly" title="Master Bedroom" href="#" coords="284,301,170,204,297,92,297,99,304,105,304,113,294,123,304,131,303,143,380,201,362,220,358,216,328,246,332,251,284,301,284,301" class="section-btn" data-id="210" />
+                    <area shape="poly" title="Kids Bedroom" href="#" coords="189,368,95,278,169,206,282,305,265,321,262,316,237,342,237,350,224,366,206,349" class="section-btn" data-id="220" />
+                </map>
             </div>
-        </div> 
+        </div>
+        <div class="section" data-id="210">
+            <div class="image-mask">
+                <div class="image">
+                    <img src="images/rooms/master_bedroom.jpg" class="scale" />
+                </div>
+            </div>
+            <div class="tooltips">
+                <div class="tooltip" style="top: 52%; left: 39%;" data-id="211">
+                    <a class="tooltip-btn btn btn-primary circle-btn" data-id="211">1</a>
+                    <div class="circle"></div>
+                    <div class="content">
+                        <a class="circle-btn btn btn-primary close-btn"></a>
+                        <h4>Lorem ipsum dolor sit amet</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></div>
+                </div>
+           
+                <div class="tooltip" style="top: 84%; left: 26%;" data-id="212">
+                    <a class="tooltip-btn btn btn-primary circle-btn" data-id="212">2</a>
+                    <div class="circle"></div>
+                    <div class="content">
+                        <a class="circle-btn btn btn-primary close-btn"></a>
+                        <h4>Lorem ipsum dolor sit amet</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section" data-id="220">
+            <div class="image-mask">
+                <div class="image">
+                    <img src="images/rooms/kids_bedroom.jpg" class="scale" />
+                </div>
+            </div>
+            <div class="tooltips">
+                <div class="tooltip" style="top: 45%; left: 34%;" data-id="221">
+                    <a class="tooltip-btn btn btn-primary circle-btn" data-id="221">1</a>
+                    <div class="circle"></div>
+                    <div class="content">
+                        <a class="circle-btn btn btn-primary close-btn"></a>
+                        <h4>Lorem ipsum dolor sit amet</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></div>
+                </div>
+           
+                <div class="tooltip" style="top: 70%; left: 48%;" data-id="222">
+                    <a class="tooltip-btn btn btn-primary circle-btn" data-id="222">2</a>
+                    <div class="circle"></div>
+                    <div class="content">
+                        <a class="circle-btn btn btn-primary close-btn"></a>
+                        <h4>Lorem ipsum dolor sit amet</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="section" data-id="300">
             <div class="content">
                  <h3 class="title text-center">You're outside</h3>
             </div>
-            <div class="image">
-                <img class="scale" src="images/floors/outside.png" />
+            <div class="image-container" style="width: 448px;">
+                <a class="section-btn btn-primary btn small" data-id="310" style="top: 45%; left: 0%;">Garden</a>
+                <img class="image" src="images/floors/outside.png" width="448" height="460" usemap="#outside-img" />
+                <map class="map" name="outside-img">
+                    <area shape="poly" title="Garden" href="#" coords="284,301,170,204,297,92,297,99,304,105,304,113,294,123,304,131,303,143,380,201,362,220,358,216,328,246,332,251,284,301,284,301" class="section-btn" data-id="310" />                   
+                </map>
             </div>
         </div> 
-
+        <div class="section" data-id="310">
+            <div class="image-mask">
+                <div class="image">
+                    <img src="images/rooms/garden.jpg" class="scale" />
+                </div>
+            </div>
+            <div class="tooltips">
+                <div class="tooltip" style="top: 70%; left: 45%;" data-id="221">
+                    <a class="tooltip-btn btn btn-primary circle-btn" data-id="221">1</a>
+                    <div class="circle"></div>
+                    <div class="content">
+                        <a class="circle-btn btn btn-primary close-btn"></a>
+                        <h4>Lorem ipsum dolor sit amet</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></div>
+                </div>
+            </div>
+        </div>
 
         <!--div class="section" data-id="1">
             <img class="scale background" src="images/outside_bg.jpg" alt="">
@@ -99,25 +314,216 @@
         </div-->
     </div>
     <footer class="footer">
-        <a class="section-btn home-btn"><img src="images/icons/home.png" /></a>
+        <a class="section-btn home-btn" data-id="0"></a>
+        <a class="section-btn info-btn"></a>
         <div class="section-navigation-container">
-            <h5 class="title grey italic text-center italic">Navigation:</h5>
-            <nav class="section-navigation navigation">
+            <nav class="section-navigation navigation" data-id="100">
+                <h5 class="title grey italic text-center italic">Navigation:</h5>
                 <ul class="clearfix">
                     <li>
-                        <a class="section-btn btn btn-primary has-icon" data-id="10"><i class="icon number">1</i>Downstairs</a>
+                        <a class="section-btn btn btn-primary has-icon" data-id="110"><i class="icon"><img src="images/icons/living_room.jpg" /></i>Living Room</a>
                     </li>
                     <li>
-                        <a class="section-btn btn btn-primary has-icon" data-id="20"><i class="icon number">2</i>Upstairs</a>
+                        <a class="section-btn btn btn-primary has-icon" data-id="120"><i class="icon"><img src="images/icons/study.jpg" /></i>Study</a>
                     </li>
                     <li>
-                        <a class="section-btn btn btn-primary has-icon" data-id="30"><i class="icon number">3</i>Outside</a>
-                    </li>
-                    <li>
-                        <a class="section-btn btn btn-primary has-icon" data-id="40"><i class="icon"><img src="images/icons/downstairs_study.jpg" /></i>Home</a>
+                        <a class="section-btn btn btn-primary has-icon" data-id="130"><i class="icon"><img src="images/icons/kitchen.jpg" /></i>Kitchen</a>
                     </li>
                 </ul>
             </nav>
+            <nav class="section-navigation navigation" data-id="110">
+                <h5 class="title grey italic text-center italic">Navigation:</h5>
+                <ul class="clearfix">
+                    <li>
+                        <a class="tooltip-btn btn btn-primary has-icon" data-id="111"><i class="icon number">1</i>Tooltip title</a>
+                    </li>
+                    <li>
+                        <a class="tooltip-btn btn btn-primary has-icon" data-id="112"><i class="icon number">2</i>Tooltip title</a>
+                    </li>
+                    <li>
+                        <a class="tooltip-btn btn btn-primary has-icon" data-id="113"><i class="icon number">3</i>Tooltip title</a>
+                    </li>
+                    <li>
+                        <a class="tooltip-btn btn btn-primary has-icon" data-id="114"><i class="icon number">4</i>Tooltip title</a>
+                    </li>
+                    <li>
+                        <a class="tooltip-btn btn btn-primary has-icon" data-id="115"><i class="icon number">5</i>Tooltip title</a>
+                    </li>
+                    <li>
+                        <a class="tooltip-btn btn btn-primary has-icon" data-id="116"><i class="icon number">6</i>Tooltip title</a>
+                    </li>
+                </ul>
+            </nav>
+            <nav class="section-navigation navigation" data-id="120">
+                <h5 class="title grey italic text-center italic">Navigation:</h5>
+                <ul class="clearfix">
+                    <li>
+                        <a class="tooltip-btn btn btn-primary has-icon" data-id="121"><i class="icon number">1</i>Tooltip title</a>
+                    </li>
+                    <li>
+                        <a class="tooltip-btn btn btn-primary has-icon" data-id="121"><i class="icon number">2</i>Tooltip title</a>
+                    </li>
+                    <li>
+                        <a class="tooltip-btn btn btn-primary has-icon" data-id="123"><i class="icon number">3</i>Tooltip title</a>
+                    </li>
+                </ul>
+            </nav>
+            <nav class="section-navigation navigation" data-id="130">
+                <h5 class="title grey italic text-center italic">Navigation:</h5>
+                <ul class="clearfix">
+                    <li>
+                        <a class="tooltip-btn btn btn-primary has-icon" data-id="131"><i class="icon number">1</i>Tooltip title</a>
+                    </li>
+                    <li>
+                        <a class="tooltip-btn btn btn-primary has-icon" data-id="131"><i class="icon number">2</i>Tooltip title</a>
+                    </li>
+                    <li>
+                        <a class="tooltip-btn btn btn-primary has-icon" data-id="133"><i class="icon number">3</i>Tooltip title</a>
+                    </li>
+                    <li>
+                        <a class="tooltip-btn btn btn-primary has-icon" data-id="134"><i class="icon number">4</i>Tooltip title</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <nav class="section-navigation navigation" data-id="200">
+                <h5 class="title grey italic text-center italic">Navigation:</h5>
+                <ul class="clearfix">
+                    <li>
+                        <a class="section-btn btn btn-primary has-icon" data-id="210"><i class="icon"><img src="images/icons/living_room.jpg" /></i>Living Room</a>
+                    </li>
+                    <li>
+                        <a class="section-btn btn btn-primary has-icon" data-id="220"><i class="icon"><img src="images/icons/study.jpg" /></i>Study</a>
+                    </li>
+                    <li>
+                        <a class="section-btn btn btn-primary has-icon" data-id="230"><i class="icon"><img src="images/icons/kitchen.jpg" /></i>Kitchen</a>
+                    </li>
+                </ul>
+            </nav>
+            <nav class="section-navigation navigation" data-id="210">
+                <h5 class="title grey italic text-center italic">Navigation:</h5>
+                <ul class="clearfix">
+                    <li>
+                        <a class="tooltip-btn btn btn-primary has-icon" data-id="211"><i class="icon number">1</i>Tooltip title</a>
+                    </li>
+                    <li>
+                        <a class="tooltip-btn btn btn-primary has-icon" data-id="212"><i class="icon number">2</i>Tooltip title</a>
+                    </li>
+                    <li>
+                        <a class="tooltip-btn btn btn-primary has-icon" data-id="213"><i class="icon number">3</i>Tooltip title</a>
+                    </li>
+                    <li>
+                        <a class="tooltip-btn btn btn-primary has-icon" data-id="214"><i class="icon number">4</i>Tooltip title</a>
+                    </li>
+                    <li>
+                        <a class="tooltip-btn btn btn-primary has-icon" data-id="215"><i class="icon number">5</i>Tooltip title</a>
+                    </li>
+                    <li>
+                        <a class="tooltip-btn btn btn-primary has-icon" data-id="216"><i class="icon number">6</i>Tooltip title</a>
+                    </li>
+                </ul>
+            </nav>
+            <nav class="section-navigation navigation" data-id="220">
+                <h5 class="title grey italic text-center italic">Navigation:</h5>
+                <ul class="clearfix">
+                    <li>
+                        <a class="tooltip-btn btn btn-primary has-icon" data-id="221"><i class="icon number">1</i>Tooltip title</a>
+                    </li>
+                    <li>
+                        <a class="tooltip-btn btn btn-primary has-icon" data-id="221"><i class="icon number">2</i>Tooltip title</a>
+                    </li>
+                    <li>
+                        <a class="tooltip-btn btn btn-primary has-icon" data-id="223"><i class="icon number">3</i>Tooltip title</a>
+                    </li>
+                </ul>
+            </nav>
+            <nav class="section-navigation navigation" data-id="230">
+                <h5 class="title grey italic text-center italic">Navigation:</h5>
+                <ul class="clearfix">
+                    <li>
+                        <a class="tooltip-btn btn btn-primary has-icon" data-id="231"><i class="icon number">1</i>Tooltip title</a>
+                    </li>
+                    <li>
+                        <a class="tooltip-btn btn btn-primary has-icon" data-id="231"><i class="icon number">2</i>Tooltip title</a>
+                    </li>
+                    <li>
+                        <a class="tooltip-btn btn btn-primary has-icon" data-id="233"><i class="icon number">3</i>Tooltip title</a>
+                    </li>
+                    <li>
+                        <a class="tooltip-btn btn btn-primary has-icon" data-id="234"><i class="icon number">4</i>Tooltip title</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <nav class="section-navigation navigation" data-id="300">
+                <h5 class="title grey italic text-center italic">Navigation:</h5>
+                <ul class="clearfix">
+                    <li>
+                        <a class="section-btn btn btn-primary has-icon" data-id="310"><i class="icon"><img src="images/icons/living_room.jpg" /></i>Living Room</a>
+                    </li>
+                    <li>
+                        <a class="section-btn btn btn-primary has-icon" data-id="320"><i class="icon"><img src="images/icons/study.jpg" /></i>Study</a>
+                    </li>
+                    <li>
+                        <a class="section-btn btn btn-primary has-icon" data-id="330"><i class="icon"><img src="images/icons/kitchen.jpg" /></i>Kitchen</a>
+                    </li>
+                </ul>
+            </nav>
+            <nav class="section-navigation navigation" data-id="310">
+                <h5 class="title grey italic text-center italic">Navigation:</h5>
+                <ul class="clearfix">
+                    <li>
+                        <a class="tooltip-btn btn btn-primary has-icon" data-id="311"><i class="icon number">1</i>Tooltip title</a>
+                    </li>
+                    <li>
+                        <a class="tooltip-btn btn btn-primary has-icon" data-id="312"><i class="icon number">2</i>Tooltip title</a>
+                    </li>
+                    <li>
+                        <a class="tooltip-btn btn btn-primary has-icon" data-id="313"><i class="icon number">3</i>Tooltip title</a>
+                    </li>
+                    <li>
+                        <a class="tooltip-btn btn btn-primary has-icon" data-id="314"><i class="icon number">4</i>Tooltip title</a>
+                    </li>
+                    <li>
+                        <a class="tooltip-btn btn btn-primary has-icon" data-id="315"><i class="icon number">5</i>Tooltip title</a>
+                    </li>
+                    <li>
+                        <a class="tooltip-btn btn btn-primary has-icon" data-id="316"><i class="icon number">6</i>Tooltip title</a>
+                    </li>
+                </ul>
+            </nav>
+            <nav class="section-navigation navigation" data-id="320">
+                <h5 class="title grey italic text-center italic">Navigation:</h5>
+                <ul class="clearfix">
+                    <li>
+                        <a class="tooltip-btn btn btn-primary has-icon" data-id="321"><i class="icon number">1</i>Tooltip title</a>
+                    </li>
+                    <li>
+                        <a class="tooltip-btn btn btn-primary has-icon" data-id="321"><i class="icon number">2</i>Tooltip title</a>
+                    </li>
+                    <li>
+                        <a class="tooltip-btn btn btn-primary has-icon" data-id="323"><i class="icon number">3</i>Tooltip title</a>
+                    </li>
+                </ul>
+            </nav>
+            <nav class="section-navigation navigation" data-id="330">
+                <h5 class="title grey italic text-center italic">Navigation:</h5>
+                <ul class="clearfix">
+                    <li>
+                        <a class="tooltip-btn btn btn-primary has-icon" data-id="331"><i class="icon number">1</i>Tooltip title</a>
+                    </li>
+                    <li>
+                        <a class="tooltip-btn btn btn-primary has-icon" data-id="331"><i class="icon number">2</i>Tooltip title</a>
+                    </li>
+                    <li>
+                        <a class="tooltip-btn btn btn-primary has-icon" data-id="333"><i class="icon number">3</i>Tooltip title</a>
+                    </li>
+                    <li>
+                        <a class="tooltip-btn btn btn-primary has-icon" data-id="334"><i class="icon number">4</i>Tooltip title</a>
+                    </li>
+                </ul>
+            </nav>
+
         </div>
 
         <div class="main-navigation-container">
@@ -135,7 +541,7 @@
                         <a class="section-btn btn btn-secondary btn-block has-icon" data-id="300"><i class="icon"><img src="images/icons/outside.jpg" /></i>Outside</a>
                     </li>
                     <li class="home">
-                        <a class="section-btn btn btn-secondary btn-block has-icon" data-id="0"><i class="icon"><img src="images/icons/home.png" /></i>Home</a>
+                        <a class="section-btn btn btn-secondary btn-block has-icon" data-id="0"><i class="icon icon-home"></i>Home</a>
                     </li>
                 </ul>
             </nav>

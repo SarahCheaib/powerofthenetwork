@@ -1,76 +1,938 @@
-/*
-Syntax error: Invalid CSS after "				animation:": expected expression (e.g. 1px, bold), was "}"
-        on line 316 of /Volumes/Documents/Work/virginmedia/connected_home/build/css/scss/styles.scss
+@font-face {
+  font-family: 'icons';
+  src: url("fonts/icons.eot");
+  src: url("fonts/icons.eot?#iefix") format("embedded-opentype"), url("fonts/icons.ttf") format("truetype"), url("fonts/icons.woff") format("woff"), url("fonts/icons.svg#icons") format("svg");
+  font-weight: normal;
+  font-style: normal; }
 
-Backtrace:
-/Volumes/Documents/Work/virginmedia/connected_home/build/css/scss/styles.scss:316
-/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/scss/parser.rb:1146:in `expected'
-/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/script/lexer.rb:199:in `expected!'
-/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/script/parser.rb:471:in `assert_expr'
-/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/script/parser.rb:49:in `parse'
-/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/scss/parser.rb:1021:in `sass_script'
-/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/scss/parser.rb:881:in `value!'
-/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/scss/parser.rb:858:in `declaration'
-/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/scss/parser.rb:581:in `block in declaration_or_ruleset'
-/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/scss/parser.rb:1122:in `call'
-/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/scss/parser.rb:1122:in `rethrow'
-/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/scss/parser.rb:591:in `declaration_or_ruleset'
-/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/scss/parser.rb:553:in `block_child'
-/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/scss/parser.rb:542:in `block_contents'
-/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/scss/parser.rb:534:in `block'
-/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/scss/parser.rb:528:in `ruleset'
-/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/scss/parser.rb:590:in `block in declaration_or_ruleset'
-/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/scss/parser.rb:1122:in `call'
-/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/scss/parser.rb:1122:in `rethrow'
-/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/scss/parser.rb:591:in `declaration_or_ruleset'
-/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/scss/parser.rb:553:in `block_child'
-/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/scss/parser.rb:545:in `block_contents'
-/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/scss/parser.rb:534:in `block'
-/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/scss/parser.rb:528:in `ruleset'
-/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/scss/parser.rb:590:in `block in declaration_or_ruleset'
-/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/scss/parser.rb:1122:in `call'
-/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/scss/parser.rb:1122:in `rethrow'
-/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/scss/parser.rb:591:in `declaration_or_ruleset'
-/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/scss/parser.rb:553:in `block_child'
-/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/scss/parser.rb:545:in `block_contents'
-/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/scss/parser.rb:534:in `block'
-/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/scss/parser.rb:528:in `ruleset'
-/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/scss/parser.rb:590:in `block in declaration_or_ruleset'
-/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/scss/parser.rb:1122:in `call'
-/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/scss/parser.rb:1122:in `rethrow'
-/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/scss/parser.rb:591:in `declaration_or_ruleset'
-/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/scss/parser.rb:553:in `block_child'
-/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/scss/parser.rb:545:in `block_contents'
-/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/scss/parser.rb:534:in `block'
-/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/scss/parser.rb:528:in `ruleset'
-/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/scss/parser.rb:552:in `block_child'
-/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/scss/parser.rb:545:in `block_contents'
-/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/scss/parser.rb:82:in `stylesheet'
-/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/scss/parser.rb:27:in `parse'
-/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/engine.rb:342:in `_to_tree'
-/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/engine.rb:315:in `_render'
-/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/engine.rb:262:in `render'
-/Applications/CodeKit.app/Contents/Resources/engines/compass/lib/compass/compiler.rb:140:in `block (2 levels) in compile'
-/Applications/CodeKit.app/Contents/Resources/engines/compass/lib/compass/compiler.rb:126:in `timed'
-/Applications/CodeKit.app/Contents/Resources/engines/compass/lib/compass/compiler.rb:139:in `block in compile'
-/Applications/CodeKit.app/Contents/Resources/engines/compass/lib/compass/logger.rb:45:in `red'
-/Applications/CodeKit.app/Contents/Resources/engines/compass/lib/compass/compiler.rb:138:in `compile'
-/Applications/CodeKit.app/Contents/Resources/engines/compass/lib/compass/compiler.rb:118:in `compile_if_required'
-/Applications/CodeKit.app/Contents/Resources/engines/compass/lib/compass/compiler.rb:103:in `block (2 levels) in run'
-/Applications/CodeKit.app/Contents/Resources/engines/compass/lib/compass/compiler.rb:101:in `each'
-/Applications/CodeKit.app/Contents/Resources/engines/compass/lib/compass/compiler.rb:101:in `block in run'
-/Applications/CodeKit.app/Contents/Resources/engines/compass/lib/compass/compiler.rb:126:in `timed'
-/Applications/CodeKit.app/Contents/Resources/engines/compass/lib/compass/compiler.rb:100:in `run'
-/Applications/CodeKit.app/Contents/Resources/engines/compass/lib/compass/commands/update_project.rb:45:in `perform'
-/Applications/CodeKit.app/Contents/Resources/engines/compass/lib/compass/commands/base.rb:18:in `execute'
-/Applications/CodeKit.app/Contents/Resources/engines/compass/lib/compass/commands/project_base.rb:19:in `execute'
-/Applications/CodeKit.app/Contents/Resources/engines/compass/lib/compass/exec/sub_command_ui.rb:43:in `perform!'
-/Applications/CodeKit.app/Contents/Resources/engines/compass/lib/compass/exec/sub_command_ui.rb:15:in `run!'
-/Applications/CodeKit.app/Contents/Resources/engines/compass/bin/compass:44:in `block in <main>'
-/Applications/CodeKit.app/Contents/Resources/engines/compass/bin/compass:58:in `call'
-/Applications/CodeKit.app/Contents/Resources/engines/compass/bin/compass:58:in `<main>'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Syntax error: Invalid CSS after \"				animation:\": expected expression (e.g. 1px, bold), was \"}\"\A         on line 316 of /Volumes/Documents/Work/virginmedia/connected_home/build/css/scss/styles.scss"; }
+@-moz-keyframes fade-in {
+  /* line 69, scss/styles.scss */
+  from {
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+    opacity: 0; }
+
+  /* line 72, scss/styles.scss */
+  to {
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+    opacity: 1; } }
+
+@-webkit-keyframes fade-in {
+  /* line 69, scss/styles.scss */
+  from {
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+    opacity: 0; }
+
+  /* line 72, scss/styles.scss */
+  to {
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+    opacity: 1; } }
+
+@-o-keyframes fade-in {
+  /* line 69, scss/styles.scss */
+  from {
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+    opacity: 0; }
+
+  /* line 72, scss/styles.scss */
+  to {
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+    opacity: 1; } }
+
+@-ms-keyframes fade-in {
+  /* line 69, scss/styles.scss */
+  from {
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+    opacity: 0; }
+
+  /* line 72, scss/styles.scss */
+  to {
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+    opacity: 1; } }
+
+@-khtml-keyframes fade-in {
+  /* line 69, scss/styles.scss */
+  from {
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+    opacity: 0; }
+
+  /* line 72, scss/styles.scss */
+  to {
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+    opacity: 1; } }
+
+@keyframes fade-in {
+  /* line 69, scss/styles.scss */
+  from {
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+    opacity: 0; }
+
+  /* line 72, scss/styles.scss */
+  to {
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+    opacity: 1; } }
+
+@-moz-keyframes fade-out {
+  /* line 79, scss/styles.scss */
+  from {
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+    opacity: 1; }
+
+  /* line 82, scss/styles.scss */
+  to {
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+    opacity: 0; } }
+
+@-webkit-keyframes fade-out {
+  /* line 79, scss/styles.scss */
+  from {
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+    opacity: 1; }
+
+  /* line 82, scss/styles.scss */
+  to {
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+    opacity: 0; } }
+
+@-o-keyframes fade-out {
+  /* line 79, scss/styles.scss */
+  from {
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+    opacity: 1; }
+
+  /* line 82, scss/styles.scss */
+  to {
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+    opacity: 0; } }
+
+@-ms-keyframes fade-out {
+  /* line 79, scss/styles.scss */
+  from {
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+    opacity: 1; }
+
+  /* line 82, scss/styles.scss */
+  to {
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+    opacity: 0; } }
+
+@-khtml-keyframes fade-out {
+  /* line 79, scss/styles.scss */
+  from {
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+    opacity: 1; }
+
+  /* line 82, scss/styles.scss */
+  to {
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+    opacity: 0; } }
+
+@keyframes fade-out {
+  /* line 79, scss/styles.scss */
+  from {
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+    opacity: 1; }
+
+  /* line 82, scss/styles.scss */
+  to {
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+    opacity: 0; } }
+
+@-moz-keyframes zoom-in {
+  /* line 89, scss/styles.scss */
+  from {
+    -webkit-transform: scale(1, 1);
+    -moz-transform: scale(1, 1);
+    -ms-transform: scale(1, 1);
+    -o-transform: scale(1, 1);
+    transform: scale(1, 1); }
+
+  /* line 92, scss/styles.scss */
+  to {
+    -webkit-transform: scale(2, 2);
+    -moz-transform: scale(2, 2);
+    -ms-transform: scale(2, 2);
+    -o-transform: scale(2, 2);
+    transform: scale(2, 2); } }
+
+@-webkit-keyframes zoom-in {
+  /* line 89, scss/styles.scss */
+  from {
+    -webkit-transform: scale(1, 1);
+    -moz-transform: scale(1, 1);
+    -ms-transform: scale(1, 1);
+    -o-transform: scale(1, 1);
+    transform: scale(1, 1); }
+
+  /* line 92, scss/styles.scss */
+  to {
+    -webkit-transform: scale(2, 2);
+    -moz-transform: scale(2, 2);
+    -ms-transform: scale(2, 2);
+    -o-transform: scale(2, 2);
+    transform: scale(2, 2); } }
+
+@-o-keyframes zoom-in {
+  /* line 89, scss/styles.scss */
+  from {
+    -webkit-transform: scale(1, 1);
+    -moz-transform: scale(1, 1);
+    -ms-transform: scale(1, 1);
+    -o-transform: scale(1, 1);
+    transform: scale(1, 1); }
+
+  /* line 92, scss/styles.scss */
+  to {
+    -webkit-transform: scale(2, 2);
+    -moz-transform: scale(2, 2);
+    -ms-transform: scale(2, 2);
+    -o-transform: scale(2, 2);
+    transform: scale(2, 2); } }
+
+@-ms-keyframes zoom-in {
+  /* line 89, scss/styles.scss */
+  from {
+    -webkit-transform: scale(1, 1);
+    -moz-transform: scale(1, 1);
+    -ms-transform: scale(1, 1);
+    -o-transform: scale(1, 1);
+    transform: scale(1, 1); }
+
+  /* line 92, scss/styles.scss */
+  to {
+    -webkit-transform: scale(2, 2);
+    -moz-transform: scale(2, 2);
+    -ms-transform: scale(2, 2);
+    -o-transform: scale(2, 2);
+    transform: scale(2, 2); } }
+
+@-khtml-keyframes zoom-in {
+  /* line 89, scss/styles.scss */
+  from {
+    -webkit-transform: scale(1, 1);
+    -moz-transform: scale(1, 1);
+    -ms-transform: scale(1, 1);
+    -o-transform: scale(1, 1);
+    transform: scale(1, 1); }
+
+  /* line 92, scss/styles.scss */
+  to {
+    -webkit-transform: scale(2, 2);
+    -moz-transform: scale(2, 2);
+    -ms-transform: scale(2, 2);
+    -o-transform: scale(2, 2);
+    transform: scale(2, 2); } }
+
+@keyframes zoom-in {
+  /* line 89, scss/styles.scss */
+  from {
+    -webkit-transform: scale(1, 1);
+    -moz-transform: scale(1, 1);
+    -ms-transform: scale(1, 1);
+    -o-transform: scale(1, 1);
+    transform: scale(1, 1); }
+
+  /* line 92, scss/styles.scss */
+  to {
+    -webkit-transform: scale(2, 2);
+    -moz-transform: scale(2, 2);
+    -ms-transform: scale(2, 2);
+    -o-transform: scale(2, 2);
+    transform: scale(2, 2); } }
+
+@-moz-keyframes zoom-out {
+  /* line 98, scss/styles.scss */
+  from {
+    -webkit-transform: scale(2, 2);
+    -moz-transform: scale(2, 2);
+    -ms-transform: scale(2, 2);
+    -o-transform: scale(2, 2);
+    transform: scale(2, 2); }
+
+  /* line 101, scss/styles.scss */
+  to {
+    -webkit-transform: scale(1, 1);
+    -moz-transform: scale(1, 1);
+    -ms-transform: scale(1, 1);
+    -o-transform: scale(1, 1);
+    transform: scale(1, 1); } }
+
+@-webkit-keyframes zoom-out {
+  /* line 98, scss/styles.scss */
+  from {
+    -webkit-transform: scale(2, 2);
+    -moz-transform: scale(2, 2);
+    -ms-transform: scale(2, 2);
+    -o-transform: scale(2, 2);
+    transform: scale(2, 2); }
+
+  /* line 101, scss/styles.scss */
+  to {
+    -webkit-transform: scale(1, 1);
+    -moz-transform: scale(1, 1);
+    -ms-transform: scale(1, 1);
+    -o-transform: scale(1, 1);
+    transform: scale(1, 1); } }
+
+@-o-keyframes zoom-out {
+  /* line 98, scss/styles.scss */
+  from {
+    -webkit-transform: scale(2, 2);
+    -moz-transform: scale(2, 2);
+    -ms-transform: scale(2, 2);
+    -o-transform: scale(2, 2);
+    transform: scale(2, 2); }
+
+  /* line 101, scss/styles.scss */
+  to {
+    -webkit-transform: scale(1, 1);
+    -moz-transform: scale(1, 1);
+    -ms-transform: scale(1, 1);
+    -o-transform: scale(1, 1);
+    transform: scale(1, 1); } }
+
+@-ms-keyframes zoom-out {
+  /* line 98, scss/styles.scss */
+  from {
+    -webkit-transform: scale(2, 2);
+    -moz-transform: scale(2, 2);
+    -ms-transform: scale(2, 2);
+    -o-transform: scale(2, 2);
+    transform: scale(2, 2); }
+
+  /* line 101, scss/styles.scss */
+  to {
+    -webkit-transform: scale(1, 1);
+    -moz-transform: scale(1, 1);
+    -ms-transform: scale(1, 1);
+    -o-transform: scale(1, 1);
+    transform: scale(1, 1); } }
+
+@-khtml-keyframes zoom-out {
+  /* line 98, scss/styles.scss */
+  from {
+    -webkit-transform: scale(2, 2);
+    -moz-transform: scale(2, 2);
+    -ms-transform: scale(2, 2);
+    -o-transform: scale(2, 2);
+    transform: scale(2, 2); }
+
+  /* line 101, scss/styles.scss */
+  to {
+    -webkit-transform: scale(1, 1);
+    -moz-transform: scale(1, 1);
+    -ms-transform: scale(1, 1);
+    -o-transform: scale(1, 1);
+    transform: scale(1, 1); } }
+
+@keyframes zoom-out {
+  /* line 98, scss/styles.scss */
+  from {
+    -webkit-transform: scale(2, 2);
+    -moz-transform: scale(2, 2);
+    -ms-transform: scale(2, 2);
+    -o-transform: scale(2, 2);
+    transform: scale(2, 2); }
+
+  /* line 101, scss/styles.scss */
+  to {
+    -webkit-transform: scale(1, 1);
+    -moz-transform: scale(1, 1);
+    -ms-transform: scale(1, 1);
+    -o-transform: scale(1, 1);
+    transform: scale(1, 1); } }
+
+/* line 108, scss/styles.scss */
+body {
+  background: #000;
+  margin: 0;
+  padding: 0;
+  font-size: 12px; }
+
+/* line 115, scss/styles.scss */
+#connected-home {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background: #FFF;
+  color: #666666;
+  position: relative;
+  margin: 0 auto;
+  max-width: 940px;
+  font-size: 13px;
+  line-height: 1.3; }
+  /* line 126, scss/styles.scss */
+  #connected-home h1, #connected-home h2, #connected-home h3, #connected-home h4, #connected-home h5, #connected-home h6 {
+    font-weight: 300;
+    color: #333333; }
+  /* line 131, scss/styles.scss */
+  #connected-home h3 {
+    font-size: 25px;
+    margin: 10px 0; }
+  /* line 136, scss/styles.scss */
+  #connected-home h4 {
+    font-size: 20px;
+    margin: 5px 0;
+    line-height: 1.2; }
+  /* line 142, scss/styles.scss */
+  #connected-home h5 {
+    font-size: 18px;
+    margin: 10px 0; }
+  /* line 147, scss/styles.scss */
+  #connected-home p {
+    margin: 5px 0; }
+  /* line 151, scss/styles.scss */
+  #connected-home b, #connected-home strong {
+    font-family: "HelveticaNeue-Bold", "Helvetica Neue Bold", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight: 600; }
+  /* line 155, scss/styles.scss */
+  #connected-home .italic {
+    font-style: italic; }
+  /* line 159, scss/styles.scss */
+  #connected-home .red {
+    color: #8a0000; }
+  /* line 163, scss/styles.scss */
+  #connected-home .text-center {
+    text-align: center; }
+  /* line 167, scss/styles.scss */
+  #connected-home .grey {
+    color: #b1b1b1; }
+  /* line 172, scss/styles.scss */
+  #connected-home a {
+    cursor: pointer;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease; }
+  /* line 178, scss/styles.scss */
+  #connected-home area:hover {
+    background: #FFF; }
+  /* line 186, scss/styles.scss */
+  #connected-home [class^="icon-"], #connected-home .home-btn:before, #connected-home .info-btn:before, #connected-home [class*=" icon-"] {
+    font-family: 'icons';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  /* line 201, scss/styles.scss */
+  #connected-home .icon-home:before, #connected-home .home-btn:before {
+    content: "\31"; }
+  /* line 204, scss/styles.scss */
+  #connected-home .icon-info:before, #connected-home .info-btn:before {
+    content: "\32"; }
+  /* line 211, scss/styles.scss */
+  #connected-home .btn-primary .icon {
+    background: #8b0000;
+    background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #8b0000), color-stop(100%, #b80000));
+    background: -webkit-linear-gradient(top, #8b0000, #b80000);
+    background: -moz-linear-gradient(top, #8b0000, #b80000);
+    background: -o-linear-gradient(top, #8b0000, #b80000);
+    background: linear-gradient(top, #8b0000, #b80000); }
+  /* line 217, scss/styles.scss */
+  #connected-home .btn-secondary {
+    background: #3a3a3a;
+    background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #3a3a3a), color-stop(100%, #2a2a2a));
+    background: -webkit-linear-gradient(top, #3a3a3a 0%, #2a2a2a 100%);
+    background: -moz-linear-gradient(top, #3a3a3a 0%, #2a2a2a 100%);
+    background: -o-linear-gradient(top, #3a3a3a 0%, #2a2a2a 100%);
+    background: linear-gradient(top, #3a3a3a 0%, #2a2a2a 100%);
+    color: #FFF; }
+    /* line 222, scss/styles.scss */
+    #connected-home .btn-secondary:hover {
+      background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #2a2a2a), color-stop(100%, #3a3a3a));
+      background: -webkit-linear-gradient(top, #2a2a2a 0%, #3a3a3a 100%);
+      background: -moz-linear-gradient(top, #2a2a2a 0%, #3a3a3a 100%);
+      background: -o-linear-gradient(top, #2a2a2a 0%, #3a3a3a 100%);
+      background: linear-gradient(top, #2a2a2a 0%, #3a3a3a 100%); }
+    /* line 226, scss/styles.scss */
+    #connected-home .btn-secondary .icon {
+      background: #292929;
+      background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #292929), color-stop(100%, #373737));
+      background: -webkit-linear-gradient(top, #292929, #373737);
+      background: -moz-linear-gradient(top, #292929, #373737);
+      background: -o-linear-gradient(top, #292929, #373737);
+      background: linear-gradient(top, #292929, #373737); }
+  /* line 232, scss/styles.scss */
+  #connected-home .btn {
+    font-family: "HelveticaNeue-Medium", "Helvetica Neue Medium", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight: 400;
+    text-align: left;
+    font-style: italic;
+    position: relative;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease; }
+    /* line 243, scss/styles.scss */
+    #connected-home .btn.selected {
+      background: #000;
+      border: 1px solid #666;
+      -webkit-box-shadow: none;
+      -moz-box-shadow: none;
+      box-shadow: none; }
+      /* line 247, scss/styles.scss */
+      #connected-home .btn.selected .icon {
+        background: none;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+        border-right: 1px solid #666; }
+    /* line 258, scss/styles.scss */
+    #connected-home .btn.has-icon {
+      padding-left: 50px; }
+    /* line 262, scss/styles.scss */
+    #connected-home .btn .icon {
+      font-style: normal;
+      -webkit-border-radius: 3px 0 0 3px;
+      -moz-border-radius: 3px 0 0 3px;
+      -ms-border-radius: 3px 0 0 3px;
+      -o-border-radius: 3px 0 0 3px;
+      border-radius: 3px 0 0 3px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      font-size: 0.9em;
+      width: 36px;
+      text-align: center;
+      -webkit-box-shadow: inset -2px 0 2px rgba(0, 0, 0, 0.5);
+      -moz-box-shadow: inset -2px 0 2px rgba(0, 0, 0, 0.5);
+      box-shadow: inset -2px 0 2px rgba(0, 0, 0, 0.5);
+      overflow: hidden; }
+      /* line 275, scss/styles.scss */
+      #connected-home .btn .icon img {
+        max-width: 100%;
+        height: auto; }
+      /* line 280, scss/styles.scss */
+      #connected-home .btn .icon.number {
+        font-family: "HelveticaNeue-Bold", "Helvetica Neue Bold", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+        font-weight: 600;
+        line-height: 2.6;
+        -webkit-box-shadow: inset 1px 0 2px #c20000, inset -2px 0 2px rgba(0, 0, 0, 0.5);
+        -moz-box-shadow: inset 1px 0 2px #c20000, inset -2px 0 2px rgba(0, 0, 0, 0.5);
+        box-shadow: inset 1px 0 2px #c20000, inset -2px 0 2px rgba(0, 0, 0, 0.5); }
+        /* line 284, scss/styles.scss */
+        #connected-home .btn .icon.number:before {
+          content: '';
+          border: 2px solid #FFF;
+          width: 16px;
+          height: 16px;
+          display: block;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          -webkit-border-radius: 50%;
+          -moz-border-radius: 50%;
+          -ms-border-radius: 50%;
+          -o-border-radius: 50%;
+          border-radius: 50%;
+          margin: -10px 0 0 -10px; }
+      /* line 298, scss/styles.scss */
+      #connected-home .btn .icon.icon-home {
+        height: 99%;
+        font-size: 18px;
+        line-height: 28px; }
+  /* line 307, scss/styles.scss */
+  #connected-home .circle-btn {
+    -webkit-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+    padding: 0;
+    border: 2px solid #FFF;
+    display: inline-block;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    color: #FFF;
+    font-family: "HelveticaNeue-Bold", "Helvetica Neue Bold", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    text-shadow: 0 -1px 1px black; }
+    /* line 331, scss/styles.scss */
+    #connected-home .circle-btn:hover {
+      text-shadow: 0 1px 1px black; }
+  /* line 337, scss/styles.scss */
+  #connected-home .home-btn {
+    font-size: 30px;
+    color: #3a3a3a; }
+    /* line 345, scss/styles.scss */
+    #connected-home .home-btn:hover {
+      color: #3a3a3a; }
+    /* line 349, scss/styles.scss */
+    #connected-home .home-btn.selected {
+      color: #c21715; }
+  /* line 354, scss/styles.scss */
+  #connected-home .info-btn {
+    font-size: 30px;
+    color: #3a3a3a; }
+    /* line 362, scss/styles.scss */
+    #connected-home .info-btn:hover {
+      color: #3a3a3a; }
+    /* line 366, scss/styles.scss */
+    #connected-home .info-btn.selected {
+      color: #c21715; }
+  /* line 371, scss/styles.scss */
+  #connected-home .close-btn {
+    line-height: 26px;
+    font-size: 24px;
+    width: 30px;
+    height: 30px; }
+    /* line 376, scss/styles.scss */
+    #connected-home .close-btn:before {
+      content: '\00D7'; }
+  /* line 384, scss/styles.scss */
+  #connected-home img {
+    height: auto;
+    max-width: 100%; }
+  /* line 389, scss/styles.scss */
+  #connected-home .scale {
+    width: 100%;
+    height: auto; }
+  /* line 395, scss/styles.scss */
+  #connected-home .clearfix:before,
+  #connected-home .clearfix:after {
+    content: " ";
+    /* 1 */
+    display: table;
+    /* 2 */ }
+  /* line 400, scss/styles.scss */
+  #connected-home .clearfix:after {
+    clear: both; }
+  /* line 404, scss/styles.scss */
+  #connected-home .clearfix {
+    *zoom: 1; }
+  /* line 412, scss/styles.scss */
+  #connected-home .header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 300; }
+    /* line 420, scss/styles.scss */
+    #connected-home .header .home-btn,
+    #connected-home .header .info-btn {
+      position: absolute;
+      top: 5px;
+      border: 2px solid #FFF;
+      color: #FFF;
+      width: 40px;
+      height: 40px;
+      line-height: 40px;
+      font-size: 20px;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -ms-border-radius: 50%;
+      -o-border-radius: 50%;
+      border-radius: 50%;
+      text-align: center;
+      -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.4);
+      -moz-box-shadow: 0 0 3px rgba(0, 0, 0, 0.4);
+      box-shadow: 0 0 3px rgba(0, 0, 0, 0.4);
+      text-shadow: 0 0 3px rgba(0, 0, 0, 0.4);
+      display: none; }
+      /* line 435, scss/styles.scss */
+      #connected-home .header .home-btn:hover,
+      #connected-home .header .info-btn:hover {
+        background: #c21715; }
+      @media only screen and (max-width: 767px) {
+        /* line 420, scss/styles.scss */
+        #connected-home .header .home-btn,
+        #connected-home .header .info-btn {
+          display: block; } }
+    /* line 446, scss/styles.scss */
+    #connected-home .header .home-btn {
+      left: 10px; }
+    /* line 450, scss/styles.scss */
+    #connected-home .header .info-btn {
+      right: 10px; }
+  /* line 457, scss/styles.scss */
+  #connected-home.section-0 .header .home-btn {
+    display: none; }
+  /* line 462, scss/styles.scss */
+  #connected-home .sections {
+    position: relative;
+    z-index: 200; }
+    /* line 465, scss/styles.scss */
+    #connected-home .sections .section {
+      position: relative;
+      background: #FFF;
+      display: none; }
+      /* line 470, scss/styles.scss */
+      #connected-home .sections .section.current {
+        display: block; }
+      /* line 474, scss/styles.scss */
+      #connected-home .sections .section.enter {
+        filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+        opacity: 1;
+        -webkit-animation: fade-in 0.3s 1 ease;
+        -moz-animation: fade-in 0.3s 1 ease;
+        -o-animation: fade-in 0.3s 1 ease;
+        animation: fade-in 0.3s 1 ease; }
+      /* line 479, scss/styles.scss */
+      #connected-home .sections .section.leave {
+        filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+        opacity: 0;
+        -webkit-animation: fade-out 0.0001s 1 ease;
+        -moz-animation: fade-out 0.0001s 1 ease;
+        -o-animation: fade-out 0.0001s 1 ease;
+        animation: fade-out 0.0001s 1 ease; }
+      /* line 485, scss/styles.scss */
+      #connected-home .sections .section.zoom-in .image {
+        -webkit-filter: blur(2px);
+        -moz-filter: blur(2px);
+        filter: blur(2px);
+        -webkit-transform: scale(2, 2);
+        -moz-transform: scale(2, 2);
+        -ms-transform: scale(2, 2);
+        -o-transform: scale(2, 2);
+        transform: scale(2, 2);
+        -webkit-animation: zoom-in 0.3s 1 ease;
+        -moz-animation: zoom-in 0.3s 1 ease;
+        -o-animation: zoom-in 0.3s 1 ease;
+        animation: zoom-in 0.3s 1 ease; }
+      /* line 491, scss/styles.scss */
+      #connected-home .sections .section.zoom-in .tooltips .tooltip {
+        display: none; }
+        /* line 494, scss/styles.scss */
+        #connected-home .sections .section.zoom-in .tooltips .tooltip.current {
+          display: block; }
+      /* line 501, scss/styles.scss */
+      #connected-home .sections .section.zoom-out .image {
+        -webkit-transform: scale(1, 1);
+        -moz-transform: scale(1, 1);
+        -ms-transform: scale(1, 1);
+        -o-transform: scale(1, 1);
+        transform: scale(1, 1);
+        -webkit-animation: zoom-out 0.3s 1 ease;
+        -moz-animation: zoom-out 0.3s 1 ease;
+        -o-animation: zoom-out 0.3s 1 ease;
+        animation: zoom-out 0.3s 1 ease; }
+      /* line 507, scss/styles.scss */
+      #connected-home .sections .section .content {
+        z-index: 200;
+        padding: 0 2.5em; }
+      /* line 512, scss/styles.scss */
+      #connected-home .sections .section .image-mask {
+        overflow: hidden; }
+      /* line 516, scss/styles.scss */
+      #connected-home .sections .section .image-container {
+        position: relative;
+        margin: 0 auto; }
+        /* line 520, scss/styles.scss */
+        #connected-home .sections .section .image-container .btn.section-btn {
+          position: absolute;
+          z-index: 300; }
+      /* line 525, scss/styles.scss */
+      #connected-home .sections .section .image {
+        left: 0;
+        position: relative; }
+        /* line 552, scss/styles.scss */
+        #connected-home .sections .section .image img {
+          display: block; }
+        /* line 555, scss/styles.scss */
+        #connected-home .sections .section .image .overlay {
+          top: 0;
+          left: 0; }
+      /* line 563, scss/styles.scss */
+      #connected-home .sections .section .tooltips {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0; }
+      /* line 570, scss/styles.scss */
+      #connected-home .sections .section .tooltip {
+        position: absolute; }
+        /* line 574, scss/styles.scss */
+        #connected-home .sections .section .tooltip.ready .tooltip-btn,
+        #connected-home .sections .section .tooltip.ready .circle {
+          filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+          opacity: 0; }
+        /* line 577, scss/styles.scss */
+        #connected-home .sections .section .tooltip.ready .content {
+          display: block; }
+        /* line 585, scss/styles.scss */
+        #connected-home .sections .section .tooltip.enter .tooltip-btn {
+          filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+          opacity: 0;
+          -webkit-animation: fade-out 0.3s ease;
+          -moz-animation: fade-out 0.3s ease;
+          -o-animation: fade-out 0.3s ease;
+          animation: fade-out 0.3s ease; }
+        /* line 590, scss/styles.scss */
+        #connected-home .sections .section .tooltip.enter .circle {
+          display: block;
+          filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+          opacity: 1;
+          -webkit-animation: fade-in 0.3s ease;
+          -moz-animation: fade-in 0.3s ease;
+          -o-animation: fade-in 0.3s ease;
+          animation: fade-in 0.3s ease; }
+        /* line 598, scss/styles.scss */
+        #connected-home .sections .section .tooltip.ready .tooltip-btn {
+          filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+          opacity: 0;
+          display: none; }
+        /* line 603, scss/styles.scss */
+        #connected-home .sections .section .tooltip.ready .circle {
+          display: block;
+          filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+          opacity: 1; }
+        /* line 609, scss/styles.scss */
+        #connected-home .sections .section .tooltip .circle {
+          border: 3px solid rgba(255, 255, 255, 0.8);
+          width: 150px;
+          height: 150px;
+          -webkit-border-radius: 50%;
+          -moz-border-radius: 50%;
+          -ms-border-radius: 50%;
+          -o-border-radius: 50%;
+          border-radius: 50%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          margin: -75px 0 0 -75px;
+          display: none; }
+        /* line 621, scss/styles.scss */
+        #connected-home .sections .section .tooltip .tooltip-btn {
+          position: absolute;
+          top: 30px;
+          left: -20px;
+          -webkit-transition: none;
+          -moz-transition: none;
+          -o-transition: none;
+          transition: none; }
+        /* line 627, scss/styles.scss */
+        #connected-home .sections .section .tooltip .content {
+          display: none;
+          width: 300px;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          margin: 110px 0 0 -150px;
+          background: #FFF;
+          background: rgba(255, 255, 255, 0.95);
+          padding: 15px 20px;
+          -webkit-border-radius: 10px;
+          -moz-border-radius: 10px;
+          -ms-border-radius: 10px;
+          -o-border-radius: 10px;
+          border-radius: 10px;
+          -webkit-box-sizing: border-box;
+          -moz-box-sizing: border-box;
+          box-sizing: border-box; }
+          /* line 639, scss/styles.scss */
+          #connected-home .sections .section .tooltip .content:before {
+            content: '';
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            margin: 0 0 0 -20px;
+            width: 0;
+            height: 0;
+            border-left: 20px solid transparent;
+            border-right: 20px solid transparent;
+            border-bottom: 20px solid rgba(255, 255, 255, 0.95); }
+          /* line 653, scss/styles.scss */
+          #connected-home .sections .section .tooltip .content .close-btn {
+            position: absolute;
+            top: 0;
+            right: 0;
+            margin: -15px -15px 0 0; }
+  /* line 664, scss/styles.scss */
+  #connected-home .footer {
+    background: #000;
+    position: relative;
+    z-index: 100; }
+    /* line 668, scss/styles.scss */
+    #connected-home .footer .section-navigation-container {
+      display: none; }
+      @media only screen and (max-width: 767px) {
+        /* line 668, scss/styles.scss */
+        #connected-home .footer .section-navigation-container {
+          display: block; } }
+      /* line 675, scss/styles.scss */
+      #connected-home .footer .section-navigation-container .section-navigation {
+        display: none;
+        padding: 10px; }
+        /* line 678, scss/styles.scss */
+        #connected-home .footer .section-navigation-container .section-navigation.current {
+          display: block; }
+    /* line 683, scss/styles.scss */
+    #connected-home .footer .main-navigation-container {
+      background: #1a1a1a; }
+      @media only screen and (max-width: 767px) {
+        /* line 683, scss/styles.scss */
+        #connected-home .footer .main-navigation-container {
+          padding: 10px; } }
+      /* line 689, scss/styles.scss */
+      #connected-home .footer .main-navigation-container .title {
+        display: none; }
+        @media only screen and (max-width: 767px) {
+          /* line 689, scss/styles.scss */
+          #connected-home .footer .main-navigation-container .title {
+            display: block; } }
+    /* line 699, scss/styles.scss */
+    #connected-home .footer .home-btn,
+    #connected-home .footer .info-btn {
+      position: absolute;
+      top: 10px; }
+      @media only screen and (max-width: 767px) {
+        /* line 699, scss/styles.scss */
+        #connected-home .footer .home-btn,
+        #connected-home .footer .info-btn {
+          display: none; } }
+    /* line 707, scss/styles.scss */
+    #connected-home .footer .home-btn {
+      left: 20px; }
+    /* line 711, scss/styles.scss */
+    #connected-home .footer .info-btn {
+      position: absolute;
+      top: 10px;
+      right: 20px; }
+    /* line 717, scss/styles.scss */
+    #connected-home .footer .navigation {
+      text-align: center; }
+      /* line 719, scss/styles.scss */
+      #connected-home .footer .navigation ul {
+        display: inline-block;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        text-align: center; }
+        @media only screen and (max-width: 767px) {
+          /* line 719, scss/styles.scss */
+          #connected-home .footer .navigation ul {
+            text-align: left;
+            display: block; } }
+        /* line 731, scss/styles.scss */
+        #connected-home .footer .navigation ul li {
+          margin: 10px 0.6em;
+          float: left;
+          width: 160px; }
+          @media only screen and (max-width: 767px) {
+            /* line 731, scss/styles.scss */
+            #connected-home .footer .navigation ul li {
+              float: none;
+              width: auto;
+              margin-top: 1.2em;
+              margin-bottom: 1.2em; } }
+          /* line 743, scss/styles.scss */
+          #connected-home .footer .navigation ul li.home {
+            display: none; }
+            @media only screen and (max-width: 767px) {
+              /* line 743, scss/styles.scss */
+              #connected-home .footer .navigation ul li.home {
+                margin-top: 2.5em;
+                display: block; } }
+          /* line 758, scss/styles.scss */
+          #connected-home .footer .navigation ul li a {
+            display: block; }
