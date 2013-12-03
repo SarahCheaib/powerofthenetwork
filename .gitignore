@@ -3,3 +3,5 @@
 /config.rb
 /._*
 /.*
+
+/sftp-config.json

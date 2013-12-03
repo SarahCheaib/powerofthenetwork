@@ -37,9 +37,14 @@
 
     				section.addClass('current');
     				section.addClass('enter');
-    				section.one('webkitAnimationEnd oanimationend msAnimationEnd animationend', function(){
-    					section.trigger('ready.section');
-    				});
+
+                    if(!Modernizr.cssanimations) {
+                        section.trigger('ready.section');
+                    } else {
+                        section.one('webkitAnimationEnd oanimationend msAnimationEnd animationend', function(){
+                            section.trigger('ready.section');
+                        });
+                    }
                     navigations.goto(id);
                     plugin.element.addClass('section-'+id);
     				sections.btn.removeClass('selected');
@@ -48,19 +53,24 @@
     			}).on('ready.section', function(e){
     				var section = $(this),
                         id = section.data('id');
+
     				section.removeClass('enter').addClass('ready');
                     sections.currId = id;
     			}).on('leave.section', function(e){
     				var section = $(this);
     				section.removeClass('ready').addClass('leave');
-    				section.one('webkitAnimationEnd oanimationend msAnimationEnd animationend', function(){
-    					section.trigger('exit.section');
-    				});
-
+                    if(!Modernizr.cssanimations) {
+                        section.trigger('exit.section');
+                    } else {
+        				section.one('webkitAnimationEnd oanimationend msAnimationEnd animationend', function(){
+        					section.trigger('exit.section');
+        				});
+                    }
     			}).on('exit.section', function(e){
     				var section = $(this),
                         id = section.data('id'),
     					tooltip = tooltips.current();
+
 
                     plugin.element.removeClass('section-'+id);
     				section.removeClass('current leave zoom-in zoom-out');
@@ -74,9 +84,11 @@
     			}).on('zoom-out.section', function(e){
     				var section = $(this);
     				section.removeClass('zoom-in').addClass('zoom-out');
-    				section.one('webkitAnimationEnd oanimationend msAnimationEnd animationend', function(){
-    					$('.image', section).css({transformOrigin: '0 0'});
-    				});
+                    if(!Modernizr.cssanimations) {
+                        section.one('webkitAnimationEnd oanimationend msAnimationEnd animationend', function(){
+        					$('.image', section).css({transformOrigin: '0 0'});
+        				});
+                    }
     			});
 
     			sections.btn.on('click', function(){
@@ -94,14 +106,15 @@
     			if(id != currId || sections.firstRun){
 	    			
 	    			newSection = sections.section.filter('[data-id=' + id + ']');
-					if(sections.firstRun){
+
+                    if(sections.firstRun){
 	    				newSection.trigger('enter');
 	    			} else {
 	    				currSection = sections.section.filter('[data-id=' + currId + ']');
+                        currSection.one('exit.section', function(){
+                            newSection.trigger('enter.section');
+                        });
 	    				currSection.trigger('leave.section');
-	    				currSection.on('exit.section', function(){
-	    					newSection.trigger('enter.section');
-	    				});
 	    			}
 	    		}
     		},
@@ -131,10 +144,13 @@
 		    		$('.image', section).css({transformOrigin: position.left + ' '+ position.top});
 	   				tooltip.addClass('current enter');
     				section.trigger('zoom-in.section');
-    				section.one('webkitAnimationEnd oanimationend msAnimationEnd animationend', function(){
-    					tooltip.trigger('ready.tooltip');
-    				});
-
+                    if(!Modernizr.cssanimations) {
+                        tooltip.trigger('ready.tooltip');
+                    } else {
+        				section.one('webkitAnimationEnd oanimationend msAnimationEnd animationend', function(){
+        					tooltip.trigger('ready.tooltip');
+        				});
+                    }
                     tooltips.btn.removeClass('selected');
                     tooltips.btn.filter('[data-id='+id+']').addClass('selected');
     			}).on('ready.tooltip', function(){
@@ -209,12 +225,11 @@
                     sections = plugin.sections,
                     currId = sections.currId;
                 
-                console.log(id, currId);
                 if(id && id != currId){
 
                     currNavigation = navigations.navigation.filter('[data-id='+currId+']');
                     newNavigation = navigations.navigation.filter('[data-id='+id+']');
-                    console.log(newNavigation);
+                    
                     if(newNavigation.length){
                         newNavigation.addClass('current'); 
                     }
