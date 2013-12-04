@@ -1,7 +1,7 @@
 @import 'compass/css3';
 
 @mixin device-width($device){
-	$width: 0;
+	$width: 1000;
 	@if $device == tablet-landscape {
 		$width: 979px;
 	} @else if $device == tablet {
