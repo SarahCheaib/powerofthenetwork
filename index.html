@@ -5,10 +5,12 @@
 <!--[if gt IE 8]>--> <html class="no-js" lang="en"> <!--<![endif]-->
 
 <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=8" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Virgin Media - Connected Home</title>
     <link rel="stylesheet" href="css/powerofthenetwork.css" type="text/css" media="screen" />
-    <link rel="stylesheet" href="css/styles.css" type="text/css" media="screen" />
 
     <script type="text/javascript" src="js/libs/jquery.min.js"></script>
     <script type="text/javascript" src="js/libs/modernizr.min.js"></script>
@@ -21,193 +23,175 @@
 <div id="connected-home" class="clearfix">
     <header class="header">
         <a class="section-btn home-btn" data-id="0"></a>
-        <a class="section-btn info-btn"></a>
+        <a class="info-btn"></a>
     </header>
 	<div class="sections clearfix">
-        <div class="section" data-id="0">
+        <div class="section home" data-id="0" data-type="home">
 
-             <div class="content" style="position: absolute; top: 20px;">
-                <h3 class="title hidden-tablet hidden-phone">You won’t believe some of the amazing things you can do she you connect your devices to our super fast broadband and the <b>Virgin Media Super Hub.</b></h3>
+             <div class="content">
+                <h3 class="title">Step inside a more exciting place to live</h3>
 
-                <h4 class="red hidden-phone">Come inside our connected home<br />and let us show you.</h4>
-                <p><a class="section-btn btn-primary btn small" data-id="100">Explore</a>
+                <h5 class="red hidden-tablet">This isn’t just any home. Oh, no. This is a Virgin Media home. And inside you’ll see some of the incredible things you can do when you’re connected to our network. So what are you waiting for?<br />Come on in. (Leave your shoes on if you like.)</h5>
+                <h3><a class="section-btn btn-primary btn small" data-id="100">Start exploring</a></h3>
             </div>
             <div class="image">
                 <img class="scale" src="images/misc/home.jpg" />
             </div>
         </div>
-        <div class="section" data-id="100">
+        <div class="section" data-id="100" data-type="floor">
             <div class="content">
-                 <h3 class="title text-center">You're downstairs</h3>
+                <h3 class="title text-center">You're downstairs</h3>
+                <h4 class="sub-title red text-center hidden-phone">Want to know what fantastic things you can do with your devices when you connect them to our network? Click on a room and see for yourself.</h4>
             </div>
-            <div class="image-container" style="width: 448px;">
+            <div class="image-container" style="width: 472px; background-image: url(images/floors/downstairs.png)">
                 <a class="section-btn btn-primary btn small" data-id="110" style="top: 20%; left: 20%;">Living Room</a>
-                <a class="section-btn btn-primary btn small" data-id="120" style="top: 45%; left: 0%;">Study</a>
-                <a class="section-btn btn-primary btn small" data-id="130" style="top: 2%; left: 85%;">Kitchen</a>
-                <img class="image" src="images/floors/downstairs.png" width="448" height="460" usemap="#downstairs-img" />
-                <!--map class="map" name="downstairs-img">
+                <a class="section-btn btn-primary btn small" data-id="120" style="top: 75%; left: 54%;">Study</a>
+                <a class="section-btn btn-primary btn small" data-id="130" style="top: -1%; right: 1%;">Kitchen</a>
+                <div class="image" >
+                    <img src="images/floors/downstairs.png" style="opacity: 0;" usemap="#downstairs"/>
+                </div>
+                <div class="overlay">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                         <g>
+                            <path class="area" data-id="130" fill="#CC0000" d="M309.2,4.05L286.3,20.5l-38.5,31.8l52.55,38.55V100l6.65,5.9v37.35l76.701,56.95 c28.854-28.414,58.337-57.472,86.148-87.25L309.2,4.05z" />
+                            <polygon class="area" data-id="110" fill="#CC0000" points="305,107.55 297.85,101.5 297.85,94.3 171.05,204.7 285.4,301.25 334.1,252.5 329.85,248.25 358.15,218.35 361.7,224 381.8,202.8 305,145.5" />
+                            <polygon class="area" data-id="120" fill="#CC0000" points="95.15,276.95 189.75,367.4 207.75,350.25 224.1,368.2 242.95,348.1 238.2,343.5 262.65,318 267.1,323.5 283.55,303.95 168.5,207.25" />
+                        </g>
+                    </svg>
+                </div>
+                <map class="map" name="downstairs">
                     <area shape="poly" title="Living Room" href="#" coords="284,301,170,204,297,92,297,99,304,105,304,113,294,123,304,131,303,143,380,201,362,220,358,216,328,246,332,251,284,301,284,301" class="section-btn" data-id="110" />
                     <area shape="poly" title="Study" href="#" coords="189,368,95,278,169,206,282,305,265,321,262,316,237,342,237,350,224,366,206,349" class="section-btn" data-id="120" />
                     <area shape="poly" title="Kitchen" href="#" coords="247,54,297,92,296,100,303,105,304,114,294,124,303,131,303,143,378,200,380,201,407,173,408,174,467,113,307,6,284,21" class="section-btn" data-id="130" />
-                    
-                </map-->
-
-                                <!--img src="images/overlays/living_room.png" class="overlay" style="top: 20%; left: 20%;" data-id="4" /-->
-<!--                 <img class="scale" src="images/misc/home.jpg" /> -->
-                
-                <!-- <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                     <polygon class="overlay" data-id="4" id="" fill="#CC0000" points="187.1,124.05 158.8,153.95 163.05,158.2 114.35,206.95 0,110.4 126.8,0 126.8,7.2 133.95,13.25 133.95,51.2 210.75,108.5 190.65,129.7 "/>
-                </svg> -->
+                </map>
             </div>
         </div>
 
-        <div class="section" data-id="110">
+        <div class="section" data-id="110" data-type="room">
             <div class="image-mask">
                 <div class="image">
                     <img src="images/rooms/living_room.jpg" class="scale" />
                 </div>
             </div>
             <div class="tooltips">
-                <div class="tooltip" style="top: 78%; left: 22%;" data-id="111">
+                <div class="tooltip" style="top: 42%; left: 72%;" data-id="111">
                     <a class="tooltip-btn btn btn-primary circle-btn" data-id="111">1</a>
-                    <div class="circle" style="background: url(images/highlights/living_room.jpg) 0 0;"></div>
+                    <div class="circle" style="background-position: 0 0;"></div>
                     <div class="content">
                         <a class="circle-btn btn btn-primary close-btn"></a>
-                        <h4>Lorem ipsum dolor sit amet</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></div>
+                        <h4>The heart of your connected home</h4>
+                        <p>The whole family can do what they want online. Connect lots of different devices at once, stream music or video and download large files quickly. It’s a breeze for our Super Hub. And with amazing WiFi coverage, you don’t all have to crowd round it to get a great signal. Domestic bliss.</p>
+                    </div>
                 </div>
-           
-                <div class="tooltip" style="top: 54%; left: 31%;" data-id="112">
+                <div class="tooltip" style="top: 40%; left: 49%;" data-id="112">
                     <a class="tooltip-btn btn btn-primary circle-btn" data-id="112">2</a>
-                    <div class="circle" style="background: url(images/highlights/living_room.jpg) -160px 0;"></div>
+                    <div class="circle" style="background-position: -160px 0;"></div>
                     <div class="content">
                         <a class="circle-btn btn btn-primary close-btn"></a>
-                        <h4>Lorem ipsum dolor sit amet</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <h4>An even better way to watch Netflix</h4>
+                        <p>Did you know you can watch Netflix on your TiVo® box? Cool, huh? So you can stream hundreds of movies and TV shows straight to your telly. And if you search for something with your TiVo remote, your Netflix library will be searched, too. So you’re never short of something to watch.</p>
                     </div>
                 </div>
-                <div class="tooltip" style="top: 60%; left: 36%;" data-id="113">
+                <div class="tooltip" style="top: 80%; left: 73%;" data-id="113">
                     <a class="tooltip-btn btn btn-primary circle-btn" data-id="113">3</a>
-                    <div class="circle" style="background: url(images/highlights/living_room.jpg) -320px 0;"></div>
+                    <div class="circle" style="background-position: -320px 0;"></div>
                     <div class="content">
                         <a class="circle-btn btn btn-primary close-btn"></a>
-                        <h4>Lorem ipsum dolor sit amet</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <h4>Go surfing from your sofa</h4>
+                        <p>Our TiVo® box has lots of cool in-built apps. Get onto your favourite social networks, watch YouTube clips or listen to your favourite Spotify playlists. And because TiVo has its very own internet connection, you can stream your movies in crystal clear HD without slowing down any other devices on your network.</p>
                     </div>
                 </div>
-                <div class="tooltip" style="top: 40%; left: 49%;" data-id="114">
+                <div class="tooltip" style="top: 51%; left: 37%;" data-id="114">
                     <a class="tooltip-btn btn btn-primary circle-btn" data-id="114">4</a>
-                    <div class="circle" style="background: url(images/highlights/living_room.jpg) -480px 0;"></div>
+                    <div class="circle" style="background-position: -480px 0;"></div>
                     <div class="content">
                         <a class="circle-btn btn btn-primary close-btn"></a>
-                        <h4>Lorem ipsum dolor sit amet</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <h4>The beat goes on (and on)</h4>
+                        <p>Calling all air guitarists. With our superfast WiFi, your home becomes your very own concert hall. Stream your playlists from your smartphone, tablet, laptop or computer to your music system and rock the night away.</p>
                     </div>
                 </div>
-                <div class="tooltip" style="top: 60%; left: 54%;" data-id="115">
+                <div class="tooltip" style="top: 58%; left: 54%;" data-id="115">
                     <a class="tooltip-btn btn btn-primary circle-btn" data-id="115">5</a>
-                    <div class="circle" style="background: url(images/highlights/living_room.jpg) -640px 0;"></div>
+                    <div class="circle" style="background-position: -640px 0;"></div>
                     <div class="content">
                         <a class="circle-btn btn btn-primary close-btn"></a>
-                        <h4>Lorem ipsum dolor sit amet</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <h4>Take on each other – or the whole world</h4>
+                        <p>Our broadband has enough firepower for even the most hardcore gamers. You’ll enjoy super smooth game play even when your whole family is online. So whether you’re playing your mate down the road or someone in Brazil, the fun never stops. </p>
                     </div>
                 </div>
-                <div class="tooltip" style="top: 44%; left: 73%;" data-id="116">
+                <div class="tooltip" style="top: 78%; left: 22%;" data-id="116">
                     <a class="tooltip-btn btn btn-primary circle-btn" data-id="116">6</a>
-                    <div class="circle" style="background: url(images/highlights/living_room.jpg) -800px 0;"></div>
+                    <div class="circle" style="background-position: -800px 0;"></div>
                     <div class="content">
                         <a class="circle-btn btn btn-primary close-btn"></a>
-                        <h4>Lorem ipsum dolor sit amet</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                    </div>
+                        <h4>No more fighting over the remote</h4>
+                        <p>Download the TV Anywhere app to your smartphone or tablet and you can watch up to 80 live channels (including BT Sport if you have our TV XL package) anywhere in the UK with WiFi. So while one of you watches the telly, the other can watch TV on your tablet or laptop.</p></div>
                 </div>
+                
             </div>
         </div>
-        <div class="section" data-id="120">
+        <div class="section" data-id="120" data-type="room">
             <div class="image-mask">
                 <div class="image">
                     <img src="images/rooms/study.jpg" class="scale" />
                 </div>
             </div>
             <div class="tooltips">
-                <div class="tooltip" style="top: 54%; left: 26%;" data-id="121">
+                <div class="tooltip" style="top: 46%; left: 45%;" data-id="121">
                     <a class="tooltip-btn btn btn-primary circle-btn" data-id="121">1</a>
-                    <div class="circle"></div>
+                    <div class="circle" style="background-position: 0 -160px;"></div>
                     <div class="content">
                         <a class="circle-btn btn btn-primary close-btn"></a>
-                        <h4>Lorem ipsum dolor sit amet</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></div>
-                </div>
-           
-                <div class="tooltip" style="top: 45%; left: 45%;" data-id="122">
-                    <a class="tooltip-btn btn btn-primary circle-btn" data-id="122">2</a>
-                    <div class="circle"></div>
-                    <div class="content">
-                        <a class="circle-btn btn btn-primary close-btn"></a>
-                        <h4>Lorem ipsum dolor sit amet</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                    </div>
-                </div>
-                <div class="tooltip" style="top: 54%; left: 63%;" data-id="123">
-                    <a class="tooltip-btn btn btn-primary circle-btn" data-id="123">3</a>
-                    <div class="circle"></div>
-                    <div class="content">
-                        <a class="circle-btn btn btn-primary close-btn"></a>
-                        <h4>Lorem ipsum dolor sit amet</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <h4>Bring the office to you</h4>
+                        <p>That pile of work won’t feel so daunting when your toes are curled up in your slippers. With our network you can access and download files immediately, even when you’re nowhere near them. (No wonder we won Best Broadband Provider, Fastest Home Broadband, Best WiFi Service and Best Broadband Innovation at the uSwitch Broadband Awards.)</p>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="section" data-id="130">
+        <div class="section" data-id="130" data-type="room">
             <div class="image-mask">
                 <div class="image">
                     <img src="images/rooms/kitchen.jpg" class="scale" />
                 </div>
             </div>
             <div class="tooltips">
-                <div class="tooltip" style="top: 54%; left: 43%;" data-id="131">
+
+
+                <div class="tooltip" style="top: 68%; left: 50%;" data-id="131">
                     <a class="tooltip-btn btn btn-primary circle-btn" data-id="131">1</a>
-                    <div class="circle"></div>
+                    <div class="circle" style="background-position: -160px -160px;"></div>
                     <div class="content">
                         <a class="circle-btn btn btn-primary close-btn"></a>
-                        <h4>Lorem ipsum dolor sit amet</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></div>
+                        <h4>Cook up a storm</h4>
+                        <p>Looking for a little inspiration in the kitchen? When you’re connected to our network you’ll spend more time preparing a feast and less time waiting for that ‘how to stuff a chicken’ video to load.</p>
+                    </div>
+                </div>
+
+                <div class="tooltip" style="top: 54%; left: 43%;" data-id="132">
+                    <a class="tooltip-btn btn btn-primary circle-btn" data-id="132">2</a>
+                    <div class="circle" style="background-position: -320px -160px;"></div>
+                    <div class="content">
+                        <a class="circle-btn btn btn-primary close-btn"></a>
+                        <h4>Have a dinner dance</h4>
+                        <p>Do you love rocking out to the radio while you cook? With our network, you can stream your favourite radio stations and still have enough bandwidth to post those important pictures of your culinary masterpieces on Instagram with your smartphone or tablet.</p>
+                    </div>
                 </div>
            
-                <div class="tooltip" style="top: 68%; left: 50%;" data-id="132">
-                    <a class="tooltip-btn btn btn-primary circle-btn" data-id="132">2</a>
-                    <div class="circle"></div>
-                    <div class="content">
-                        <a class="circle-btn btn btn-primary close-btn"></a>
-                        <h4>Lorem ipsum dolor sit amet</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                    </div>
-                </div>
                 <div class="tooltip" style="top: 68%; left: 61%;" data-id="133">
                     <a class="tooltip-btn btn btn-primary circle-btn" data-id="133">3</a>
-                    <div class="circle"></div>
+                    <div class="circle" style="background-position: -480px -160px;"></div>
                     <div class="content">
                         <a class="circle-btn btn btn-primary close-btn"></a>
-                        <h4>Lorem ipsum dolor sit amet</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                    </div>
-                </div>
-                <div class="tooltip" style="top: 10%; left: 71%;" data-id="134">
-                    <a class="tooltip-btn btn btn-primary circle-btn" data-id="134">4</a>
-                    <div class="circle"></div>
-                    <div class="content">
-                        <a class="circle-btn btn btn-primary close-btn"></a>
-                        <h4>Lorem ipsum dolor sit amet</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <h4>Get smart with your smartphone</h4>
+                        <p>Surf the web, stream music, check your bank balance or find the perfect recipe. There’s very little your smartphone can’t do when you connect it to our network, even if you’re using lots of other devices online at the same time. And if you like watching videos or streaming music, you’ll enjoy super smooth streaming.</p>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="section" data-id="200">
+        <div class="section" data-id="200" data-type="floor">
             <div class="content">
                  <h3 class="title text-center">You're upstairs</h3>
+                 <h4 class="sub-title red text-center hidden-phone">Our network is so powerful that the whole gang can enjoy being online at the same time. To see how, click one of the rooms.</h4>
             </div>
             <div class="image-container" style="width: 448px;">
                 <a class="section-btn btn-primary btn small" data-id="210" style="top: 45%; left: 0%;">Master Bedroom</a>
@@ -219,115 +203,135 @@
                 </map>
             </div>
         </div>
-        <div class="section" data-id="210">
+        <div class="section" data-id="210" data-type="room">
             <div class="image-mask">
                 <div class="image">
                     <img src="images/rooms/master_bedroom.jpg" class="scale" />
                 </div>
             </div>
             <div class="tooltips">
-                <div class="tooltip" style="top: 52%; left: 39%;" data-id="211">
+                <div class="tooltip" style="top: 84%; left: 26%;" data-id="211">
                     <a class="tooltip-btn btn btn-primary circle-btn" data-id="211">1</a>
-                    <div class="circle"></div>
+                    <div class="circle" style="background-position: -640px -160px;"></div>
                     <div class="content">
                         <a class="circle-btn btn btn-primary close-btn"></a>
-                        <h4>Lorem ipsum dolor sit amet</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></div>
+                        <h4>Catch up with Corrie while the kids watch cartoons</h4>
+                        <p>So the kids have taken over the telly? Let them. Put your feet up with your tablet and your choice of on demand TV instead. Our network is built for smooth streaming – so there are never any distractions from me-time.</p>
+                    </div>
                 </div>
            
-                <div class="tooltip" style="top: 84%; left: 26%;" data-id="212">
+                <div class="tooltip" style="top: 52%; left: 39%;" data-id="212">
                     <a class="tooltip-btn btn btn-primary circle-btn" data-id="212">2</a>
-                    <div class="circle"></div>
+                    <div class="circle" style="background-position: -800px -160px;"></div>
                     <div class="content">
                         <a class="circle-btn btn btn-primary close-btn"></a>
-                        <h4>Lorem ipsum dolor sit amet</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <h4>Finish the film in bed</h4>
+                        <p>It’s late and you should really hit the hay, but if you go to bed now how will you know what happens in the finale? With Virgin Media’s multi-room streaming, you can press pause on your TiVo® box downstairs and carry on watching on your TiVo® box upstairs. So the only way you’ll miss the ending is if you fall asleep.</p>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="section" data-id="220">
+        <div class="section" data-id="220" data-type="room">
             <div class="image-mask">
                 <div class="image">
                     <img src="images/rooms/kids_bedroom.jpg" class="scale" />
                 </div>
             </div>
             <div class="tooltips">
-                <div class="tooltip" style="top: 45%; left: 34%;" data-id="221">
+                <div class="tooltip" style="top: 43%; left: 34%;" data-id="221">
                     <a class="tooltip-btn btn btn-primary circle-btn" data-id="221">1</a>
-                    <div class="circle"></div>
+                    <div class="circle" style="background-position: 0 -320px;"></div>
                     <div class="content">
                         <a class="circle-btn btn btn-primary close-btn"></a>
-                        <h4>Lorem ipsum dolor sit amet</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></div>
+                        <h4>Be the first to get new games and updates</h4>
+                        <p>So the game of the year has just been released and you can’t wait to give it a go. With our network, you can download it to your console in minutes. Just spare a thought for your mates with regular broadband who are left staring at that frustrating download bar.</p>
+                    </div>
                 </div>
            
-                <div class="tooltip" style="top: 70%; left: 48%;" data-id="222">
+                <div class="tooltip" style="top: 38%; left: 48%;" data-id="222">
                     <a class="tooltip-btn btn btn-primary circle-btn" data-id="222">2</a>
-                    <div class="circle"></div>
+                    <div class="circle" style="background-position: -180px -320px;"></div>
                     <div class="content">
                         <a class="circle-btn btn btn-primary close-btn"></a>
-                        <h4>Lorem ipsum dolor sit amet</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <h4>Connect the kids</h4>
+                        <p>Children love exploring, chatting and learning online (and, let’s be honest, playing the odd game, too). And it seems the older they get, the more bandwidth they crave. But because we’re always looking to make our broadband even faster, it’ll be ready for whatever they can throw at it.</p>
+                    </div>
+                </div>
+           
+                <div class="tooltip" style="top: 70%; left: 48%;" data-id="223">
+                    <a class="tooltip-btn btn btn-primary circle-btn" data-id="223">3</a>
+                    <div class="circle" style="background-position: -320px -320px;"></div>
+                    <div class="content">
+                        <a class="circle-btn btn btn-primary close-btn"></a>
+                        <h4>Protection for your family</h4>
+                        <p>There’s peace of mind for the whole family with Virgin Media broadband. We’ll help protect you from net nasties like malware and phishing sites. And with the latest parental controls, we’ll help you stop your kids seeing anything unsuitable. You can even block sites at a certain time of day if you like – so they stay focused on homework… and not Facebook.</p>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="section" data-id="300">
+        <div class="section" data-id="300" data-type="floor">
             <div class="content">
                  <h3 class="title text-center">You're outside</h3>
+                 <h4 class="sub-title red text-center hidden-phone">And you’re still connected! Click the garden to find out how our network keeps your Broadband speeds super fast inside and out.</h4>
             </div>
             <div class="image-container" style="width: 448px;">
                 <a class="section-btn btn-primary btn small" data-id="310" style="top: 45%; left: 0%;">Garden</a>
                 <img class="image" src="images/floors/outside.png" width="448" height="460" usemap="#outside-img" />
                 <map class="map" name="outside-img">
-                    <area shape="poly" title="Garden" href="#" coords="284,301,170,204,297,92,297,99,304,105,304,113,294,123,304,131,303,143,380,201,362,220,358,216,328,246,332,251,284,301,284,301" class="section-btn" data-id="310" />                   
+                    <area shape="poly" title="Garden" href="#" coords="284,301,170,204,297,92,297,99,304,105,304,113,294,123,304,131,303,143,380,201,362,220,358,216,328,246,332,251,284,301,284,301" class="section-btn" data-id="310" />
                 </map>
+
             </div>
         </div> 
-        <div class="section" data-id="310">
+        <div class="section" data-id="310" data-type="room">
             <div class="image-mask">
                 <div class="image">
                     <img src="images/rooms/garden.jpg" class="scale" />
                 </div>
             </div>
             <div class="tooltips">
-                <div class="tooltip" style="top: 70%; left: 45%;" data-id="221">
-                    <a class="tooltip-btn btn btn-primary circle-btn" data-id="221">1</a>
-                    <div class="circle"></div>
+                <div class="tooltip" style="top: 65%; left: 45%;" data-id="311">
+                    <a class="tooltip-btn btn btn-primary circle-btn" data-id="311">1</a>
+                    <div class="circle" style="background-position: -480px -320px;"></div>
                     <div class="content">
                         <a class="circle-btn btn btn-primary close-btn"></a>
-                        <h4>Lorem ipsum dolor sit amet</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></div>
+                        <h4>A breath of fresh air</h4>
+                        <p>Our new Super Hub is one flash bit of kit. It’s our fastest and most powerful yet and it’s perfect for using loads of mobile devices at once. It has an extra wireless antenna to boost its range, so you can stream the big match to your tablet with our TV Anywhere app while getting some fresh air.</p>
+                    </div>
+                </div>
+                <div class="tooltip" style="top: 58%; left: 61%;" data-id="312">
+                    <a class="tooltip-btn btn btn-primary circle-btn" data-id="312">2</a>
+                    <div class="circle" style="background-position: -640px -320px;"></div>
+                    <div class="content">
+                        <a class="circle-btn btn btn-primary close-btn"></a>
+                        <h4>Superfast cables for superfast everything</h4>
+                        <p>Our broadband doesn’t slow down the further you are from your telephone exchange. That’s because we use fibre optic cables to the street cabinets (those big green boxes you see on the pavement) and coax cables to our customers’ homes – and we’re the only broadband providers who do so. Also, because our cables are rubberised, your signal is less likely to be affected by the weather – unlike copper.</p>
+                    </div>
                 </div>
             </div>
         </div>
+    </div>
 
-
-        <div class="section" data-id="1000">
-            <div class="content">
-                
-            </div>
+    <div class="info" >
+        <div class="content" data-type="home">
+            <a class="circle-btn btn btn-primary close-btn" ></a>
+            <h4>Explore our Connected Home</h4>
+            <p>Click the image to start exploring.</p>
         </div>
-
-        <!--div class="section" data-id="1">
-            <img class="scale background" src="images/outside_bg.jpg" alt="">
+        <div class="content" data-type="floor">
+            <a class="circle-btn btn btn-primary close-btn" ></a>
+            <h4>Choose a room within our Connected Home</h4>
+            <p>Click a room to explore it in more detail and we’ll show you all the cool things you can do when powered by our network.</p>
         </div>
-        <div class="section" data-id="2">
-            <img class="map scale background center" src="images/downstairs_bg.jpg" usemap="#downstairs" border="0" width="475" height="600" alt="" />
-            <map name="downstairs" id="downstairs">
-                <area data-key="AZ" shape="poly" alt="" title="" coords="112,382,298,215,267,192,232,223,211,204,59,335,75,349" href="" target="" class="{fillColor:'00ff00'}"/>
-                <area data-key="AB" shape="poly" alt="" title="" coords="97,401,191,488,208,471,226,490,285,428,174,332" href="" target="" />
-                <area data-key="AC" shape="poly" alt="" title="" coords="287,424,469,237,309,127,244,179,298,215,171,328" href="" target="" />
-            </map>
+        <div class="content" data-type="room">
+            <a class="circle-btn btn btn-primary close-btn" ></a>
+            <h4>See what you can do with your devices</h4>
+            <p>Take a look around and click on the circle icons next to any device you like. Then watch them come alive when they’re connected to our network.</p>
         </div>
-        <div class="section item3" data-id="3">
-            <img class="scale background" src="images/upstairs_bg.jpg" alt="">
-        </div-->
     </div>
     <footer class="footer">
         <a class="section-btn home-btn" data-id="0"></a>
-        <a class="section-btn info-btn"></a>
+        <a class="info-btn"></a>
         <div class="section-navigation-container">
             <nav class="section-navigation navigation" data-id="100">
                 <h5 class="title grey italic text-center italic">Navigation:</h5>
@@ -347,22 +351,22 @@
                 <h5 class="title grey italic text-center italic">Navigation:</h5>
                 <ul class="clearfix">
                     <li>
-                        <a class="tooltip-btn btn btn-primary has-icon" data-id="111"><i class="icon number">1</i>Tooltip title</a>
+                        <a class="tooltip-btn btn btn-primary has-icon" data-id="111"><i class="icon number">1</i>Super Hub</a>
                     </li>
                     <li>
-                        <a class="tooltip-btn btn btn-primary has-icon" data-id="112"><i class="icon number">2</i>Tooltip title</a>
+                        <a class="tooltip-btn btn btn-primary has-icon" data-id="112"><i class="icon number">2</i>TV hotspot 1</a>
                     </li>
                     <li>
-                        <a class="tooltip-btn btn btn-primary has-icon" data-id="113"><i class="icon number">3</i>Tooltip title</a>
+                        <a class="tooltip-btn btn btn-primary has-icon" data-id="113"><i class="icon number">3</i>TV hotspot 2</a>
                     </li>
                     <li>
-                        <a class="tooltip-btn btn btn-primary has-icon" data-id="114"><i class="icon number">4</i>Tooltip title</a>
+                        <a class="tooltip-btn btn btn-primary has-icon" data-id="114"><i class="icon number">4</i>Music system</a>
                     </li>
                     <li>
-                        <a class="tooltip-btn btn btn-primary has-icon" data-id="115"><i class="icon number">5</i>Tooltip title</a>
+                        <a class="tooltip-btn btn btn-primary has-icon" data-id="115"><i class="icon number">5</i>Games console</a>
                     </li>
                     <li>
-                        <a class="tooltip-btn btn btn-primary has-icon" data-id="116"><i class="icon number">6</i>Tooltip title</a>
+                        <a class="tooltip-btn btn btn-primary has-icon" data-id="116"><i class="icon number">6</i>Tablet</a>
                     </li>
                 </ul>
             </nav>
@@ -370,13 +374,7 @@
                 <h5 class="title grey italic text-center italic">Navigation:</h5>
                 <ul class="clearfix">
                     <li>
-                        <a class="tooltip-btn btn btn-primary has-icon" data-id="121"><i class="icon number">1</i>Tooltip title</a>
-                    </li>
-                    <li>
-                        <a class="tooltip-btn btn btn-primary has-icon" data-id="121"><i class="icon number">2</i>Tooltip title</a>
-                    </li>
-                    <li>
-                        <a class="tooltip-btn btn btn-primary has-icon" data-id="123"><i class="icon number">3</i>Tooltip title</a>
+                        <a class="tooltip-btn btn btn-primary has-icon" data-id="121"><i class="icon number">1</i>Desktop PC</a>
                     </li>
                 </ul>
             </nav>
@@ -384,16 +382,13 @@
                 <h5 class="title grey italic text-center italic">Navigation:</h5>
                 <ul class="clearfix">
                     <li>
-                        <a class="tooltip-btn btn btn-primary has-icon" data-id="131"><i class="icon number">1</i>Tooltip title</a>
+                        <a class="tooltip-btn btn btn-primary has-icon" data-id="131"><i class="icon number">1</i>Tablet</a>
                     </li>
                     <li>
-                        <a class="tooltip-btn btn btn-primary has-icon" data-id="131"><i class="icon number">2</i>Tooltip title</a>
+                        <a class="tooltip-btn btn btn-primary has-icon" data-id="132"><i class="icon number">2</i>Internet radio</a>
                     </li>
                     <li>
-                        <a class="tooltip-btn btn btn-primary has-icon" data-id="133"><i class="icon number">3</i>Tooltip title</a>
-                    </li>
-                    <li>
-                        <a class="tooltip-btn btn btn-primary has-icon" data-id="134"><i class="icon number">4</i>Tooltip title</a>
+                        <a class="tooltip-btn btn btn-primary has-icon" data-id="133"><i class="icon number">3</i>Smartphone</a>
                     </li>
                 </ul>
             </nav>
@@ -402,13 +397,10 @@
                 <h5 class="title grey italic text-center italic">Navigation:</h5>
                 <ul class="clearfix">
                     <li>
-                        <a class="section-btn btn btn-primary has-icon" data-id="210"><i class="icon"><img src="images/icons/living_room.jpg" /></i>Living Room</a>
+                        <a class="section-btn btn btn-primary has-icon" data-id="210"><i class="icon"><img src="images/icons/living_room.jpg" /></i>Master Bedroom</a>
                     </li>
                     <li>
-                        <a class="section-btn btn btn-primary has-icon" data-id="220"><i class="icon"><img src="images/icons/study.jpg" /></i>Study</a>
-                    </li>
-                    <li>
-                        <a class="section-btn btn btn-primary has-icon" data-id="230"><i class="icon"><img src="images/icons/kitchen.jpg" /></i>Kitchen</a>
+                        <a class="section-btn btn btn-primary has-icon" data-id="220"><i class="icon"><img src="images/icons/study.jpg" /></i>Kids Bedroom</a>
                     </li>
                 </ul>
             </nav>
@@ -416,22 +408,10 @@
                 <h5 class="title grey italic text-center italic">Navigation:</h5>
                 <ul class="clearfix">
                     <li>
-                        <a class="tooltip-btn btn btn-primary has-icon" data-id="211"><i class="icon number">1</i>Tooltip title</a>
+                        <a class="tooltip-btn btn btn-primary has-icon" data-id="211"><i class="icon number">1</i>Tablet</a>
                     </li>
                     <li>
-                        <a class="tooltip-btn btn btn-primary has-icon" data-id="212"><i class="icon number">2</i>Tooltip title</a>
-                    </li>
-                    <li>
-                        <a class="tooltip-btn btn btn-primary has-icon" data-id="213"><i class="icon number">3</i>Tooltip title</a>
-                    </li>
-                    <li>
-                        <a class="tooltip-btn btn btn-primary has-icon" data-id="214"><i class="icon number">4</i>Tooltip title</a>
-                    </li>
-                    <li>
-                        <a class="tooltip-btn btn btn-primary has-icon" data-id="215"><i class="icon number">5</i>Tooltip title</a>
-                    </li>
-                    <li>
-                        <a class="tooltip-btn btn btn-primary has-icon" data-id="216"><i class="icon number">6</i>Tooltip title</a>
+                        <a class="tooltip-btn btn btn-primary has-icon" data-id="212"><i class="icon number">2</i>TV</a>
                     </li>
                 </ul>
             </nav>
@@ -439,102 +419,37 @@
                 <h5 class="title grey italic text-center italic">Navigation:</h5>
                 <ul class="clearfix">
                     <li>
-                        <a class="tooltip-btn btn btn-primary has-icon" data-id="221"><i class="icon number">1</i>Tooltip title</a>
+                        <a class="tooltip-btn btn btn-primary has-icon" data-id="221"><i class="icon number">1</i>Games consoles</a>
                     </li>
                     <li>
-                        <a class="tooltip-btn btn btn-primary has-icon" data-id="221"><i class="icon number">2</i>Tooltip title</a>
+                        <a class="tooltip-btn btn btn-primary has-icon" data-id="222"><i class="icon number">2</i>Desktop computer Hotspot 1</a>
                     </li>
                     <li>
-                        <a class="tooltip-btn btn btn-primary has-icon" data-id="223"><i class="icon number">3</i>Tooltip title</a>
+                        <a class="tooltip-btn btn btn-primary has-icon" data-id="223"><i class="icon number">3</i>Desktop computer hotspot 2</a>
                     </li>
                 </ul>
             </nav>
-            <nav class="section-navigation navigation" data-id="230">
-                <h5 class="title grey italic text-center italic">Navigation:</h5>
-                <ul class="clearfix">
-                    <li>
-                        <a class="tooltip-btn btn btn-primary has-icon" data-id="231"><i class="icon number">1</i>Tooltip title</a>
-                    </li>
-                    <li>
-                        <a class="tooltip-btn btn btn-primary has-icon" data-id="231"><i class="icon number">2</i>Tooltip title</a>
-                    </li>
-                    <li>
-                        <a class="tooltip-btn btn btn-primary has-icon" data-id="233"><i class="icon number">3</i>Tooltip title</a>
-                    </li>
-                    <li>
-                        <a class="tooltip-btn btn btn-primary has-icon" data-id="234"><i class="icon number">4</i>Tooltip title</a>
-                    </li>
-                </ul>
-            </nav>
-
             <nav class="section-navigation navigation" data-id="300">
                 <h5 class="title grey italic text-center italic">Navigation:</h5>
                 <ul class="clearfix">
                     <li>
-                        <a class="section-btn btn btn-primary has-icon" data-id="310"><i class="icon"><img src="images/icons/living_room.jpg" /></i>Living Room</a>
-                    </li>
-                    <li>
-                        <a class="section-btn btn btn-primary has-icon" data-id="320"><i class="icon"><img src="images/icons/study.jpg" /></i>Study</a>
-                    </li>
-                    <li>
-                        <a class="section-btn btn btn-primary has-icon" data-id="330"><i class="icon"><img src="images/icons/kitchen.jpg" /></i>Kitchen</a>
+                        <a class="section-btn btn btn-primary has-icon" data-id="310"><i class="icon"><img src="images/icons/garden.jpg" /></i>Garden</a>
                     </li>
                 </ul>
             </nav>
+
             <nav class="section-navigation navigation" data-id="310">
                 <h5 class="title grey italic text-center italic">Navigation:</h5>
                 <ul class="clearfix">
                     <li>
-                        <a class="tooltip-btn btn btn-primary has-icon" data-id="311"><i class="icon number">1</i>Tooltip title</a>
+                        <a class="tooltip-btn btn btn-primary has-icon" data-id="311"><i class="icon number">1</i>Laptop</a>
                     </li>
                     <li>
-                        <a class="tooltip-btn btn btn-primary has-icon" data-id="312"><i class="icon number">2</i>Tooltip title</a>
-                    </li>
-                    <li>
-                        <a class="tooltip-btn btn btn-primary has-icon" data-id="313"><i class="icon number">3</i>Tooltip title</a>
-                    </li>
-                    <li>
-                        <a class="tooltip-btn btn btn-primary has-icon" data-id="314"><i class="icon number">4</i>Tooltip title</a>
-                    </li>
-                    <li>
-                        <a class="tooltip-btn btn btn-primary has-icon" data-id="315"><i class="icon number">5</i>Tooltip title</a>
-                    </li>
-                    <li>
-                        <a class="tooltip-btn btn btn-primary has-icon" data-id="316"><i class="icon number">6</i>Tooltip title</a>
+                        <a class="tooltip-btn btn btn-primary has-icon" data-id="312"><i class="icon number">2</i>Hotspot on the grass</a>
                     </li>
                 </ul>
             </nav>
-            <nav class="section-navigation navigation" data-id="320">
-                <h5 class="title grey italic text-center italic">Navigation:</h5>
-                <ul class="clearfix">
-                    <li>
-                        <a class="tooltip-btn btn btn-primary has-icon" data-id="321"><i class="icon number">1</i>Tooltip title</a>
-                    </li>
-                    <li>
-                        <a class="tooltip-btn btn btn-primary has-icon" data-id="321"><i class="icon number">2</i>Tooltip title</a>
-                    </li>
-                    <li>
-                        <a class="tooltip-btn btn btn-primary has-icon" data-id="323"><i class="icon number">3</i>Tooltip title</a>
-                    </li>
-                </ul>
-            </nav>
-            <nav class="section-navigation navigation" data-id="330">
-                <h5 class="title grey italic text-center italic">Navigation:</h5>
-                <ul class="clearfix">
-                    <li>
-                        <a class="tooltip-btn btn btn-primary has-icon" data-id="331"><i class="icon number">1</i>Tooltip title</a>
-                    </li>
-                    <li>
-                        <a class="tooltip-btn btn btn-primary has-icon" data-id="331"><i class="icon number">2</i>Tooltip title</a>
-                    </li>
-                    <li>
-                        <a class="tooltip-btn btn btn-primary has-icon" data-id="333"><i class="icon number">3</i>Tooltip title</a>
-                    </li>
-                    <li>
-                        <a class="tooltip-btn btn btn-primary has-icon" data-id="334"><i class="icon number">4</i>Tooltip title</a>
-                    </li>
-                </ul>
-            </nav>
+           
 
         </div>
 
@@ -559,47 +474,12 @@
             </nav>
         </div>
     </footer>
-        <!--div class="section-navigation-container">
-            <a class="section-btn home" data-id="0" >Home</a>
-            <ul class="section-navigation">
-                <li>
-                    <a class="section-btn button" data-id="1" >Outside</a>
-                    <a class="section-btn button" data-id="2" >Downstairs</a>
-                    <a class="section-btn button" data-id="3" data-section-id="3" >Upstairs</a>
-                </li>
-            </ul>
-        </div-->
 </div>
 
 
 <script type="text/javascript">
     $(function() {
         $("#connected-home").connectedHome();
-
-        // jQuery.fn.maphilight.defaults = {
-        //     fill: true,
-        //     fillColor: 'CA0000',
-        //     fillOpacity: 0.7,
-        //     stroke: true,
-        //     strokeColor: 'FFFFFF',
-        //     strokeOpacity: 0,
-        //     strokeWidth: 0,
-        //     fade: true,
-        //     alwaysOn: false,
-        //     neverOn: false,
-        //     groupBy: false,
-        //     wrapClass: true,
-        //     shadow: true,
-        //     shadowX: 0,
-        //     shadowY: 0,
-        //     shadowRadius: 6,
-        //     shadowColor: '000000',
-        //     shadowOpacity: 0.8,
-        //     shadowPosition: 'outside',
-        //     shadowFrom: false
-        // }
-        
-        // jQuery('.map').maphilight({fade: true});
 });
 </script>
 </body>

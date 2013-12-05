@@ -1,4 +1,5 @@
-@import 'compass/css3';
+@import "compass/css3";
+@import "buttons";
 
 @mixin device-width($device){
 	$width: 1000;
@@ -50,19 +51,31 @@
 }
 
 @mixin keyframes($name) {
-	@-moz-keyframes #{$name} { @content; }
-	@-webkit-keyframes #{$name} { @content; }
-	@-o-keyframes #{$name} { @content; }
-	@-ms-keyframes #{$name} { @content; }
-	@-khtml-keyframes #{$name} { @content; }
-	@keyframes #{$name} { @content; }
+	@-moz-keyframes #{$name} {
+		@content;
+	}
+	@-webkit-keyframes #{$name} {
+		@content;
+	}
+	@-o-keyframes #{$name} {
+		@content;
+	}
+	@-ms-keyframes #{$name} {
+		@content;
+	}
+	@-khtml-keyframes #{$name} {
+		@content;
+	}
+	@keyframes #{$name} {
+		@content;
+	}
 }
 
-@mixin animation($value) {
-	-webkit-animation: $value;
-	-moz-animation: $value;
-	-o-animation: $value;
-	animation: $value;
+@mixin animation($animation-1, $animation-2: '') {
+	-webkit-animation: $animation-1, $animation-2;
+	-moz-animation: $animation-1, $animation-2;
+	-o-animation: $animation-1, $animation-2;
+	animation: $animation-1, $animation-2;
 }
 
 @include keyframes('fade-in') {
@@ -103,10 +116,30 @@
 	}
 }
 
+@include keyframes('bounce-in') {
+	0% {
+		top: -20px;
+	}
+
+	100% {
+		top: 0;
+	}
+}
+
+@include keyframes('blur-in') {
+	0% {
+		@include filter(blur(0));
+	}
+
+	100% {
+		@include filter(blur(4px));
+	}
+}
+
 
 
 body {
-	background: #000;
+	background: #FFF;
 	margin: 0;
 	padding: 0;
 	font-size: 12px;
@@ -410,6 +443,17 @@ body {
 	}
 
 
+	.hidden-tablet {
+		@include device-width(tablet) {
+			display: none;
+		}
+	}
+
+	.hidden-phone {
+		@include device-width(mobile) {
+			display: none;
+		}
+	}
 
 	// Layout
 
@@ -419,7 +463,8 @@ body {
 		left: 0;
 		right: 0;
 		z-index: 300;
-
+		
+		
 		.home-btn,
 		.info-btn {
 			position: absolute;
@@ -464,7 +509,7 @@ body {
 		}
 
 		.footer {
-			display: none;
+
 		}
 	}
 	.sections {
@@ -481,19 +526,32 @@ body {
 
 			&.enter {
 				@include opacity(1);
-				@include animation(fade-in 0.3s 1 ease);
+				@include animation(fade-in 0.3s ease);
 			}
 
 			&.leave {
 				@include opacity(0);
-				@include animation(fade-out 0.0001s 1 ease);
+				@include animation(fade-out 0.3s ease);
 			}
 
 			&.zoom-in {
+
 				.image {
-					@include filter(blur(2px));
-					@include scale(2);
-					@include animation(zoom-in 0.3s 1 ease);
+					//@include device-width(tablet) {
+						@include scale(2);
+						@include animation(zoom-in 0.5s ease);
+					//}
+
+					
+					&:before {
+						position: absolute;
+						content: '';
+						top: 0;
+						left: 0;
+						right: 0;
+						bottom: 0;
+						background: rgba(#000, 0.6);
+					}
 				}
 
 				.tooltips .tooltip {
@@ -507,63 +565,75 @@ body {
 
 			&.zoom-out {
 				.image {
-					@include scale(1);
-					@include animation(zoom-out 0.3s 1 ease);
+					//@include device-width(tablet) {
+						@include scale(1);
+						@include animation(zoom-out 0.3s ease);
+					//}
 				}
 			}
 
-			.content {
-				z-index: 200;
-				padding: 0 2.5em;
+			&.blur-in {
+				.image {
+					img {
+
+						@include filter(blur(4px));
+						@include animation(blur-in 1s ease);
+					}	
+				}
 			}
+
 
 			.image-mask {
 				overflow: hidden;
+				position: relative;
 			}
 
 			.image-container {
 				position: relative;
 				margin: 0 auto;
+				background-position: center center;
+
+				@include background-size(contain);
+
+				@include device-width(mobile) {
+					width: auto !important;
+				}
 
 				.btn.section-btn {
 					position: absolute;
 					z-index: 300;
 				}
+
+				.overlay {
+					top: 0;
+					left: 0;
+					position: absolute;
+					right: 0;
+					bottom: 0;
+					z-index: 100;
+
+
+					.area {
+						@include opacity(0);
+					}
+
+					@include device-width(mobile) {
+						display: none;
+					}
+
+				}
 			}
 			.image {
 				left: 0;
 				position: relative;
-				//@include transition(transform-origin 0.5s ease);
-
+				z-index: 200;
+				display: block;
+				@include transform-style(preserve-3d);
 				
-
-				//text-align: center;
-
-				// > .inner {
-				// 	position: relative;
-				// 	display: inline-block;
-				// }
-
-				.map {
-					// position: relative;
-					// z-index: 200;
-				}
-				
-				svg {
-					// display: none;
-					// position: absolute;
-					// top: 0;
-					// left: 0;
-					// z-index: 100;
-				}
-
 				img {
 					display: block;
-				}
-				.overlay {
-				//	display: none;
-					top: 0;
-					left: 0;
+					@include transform-style(preserve-3d);
+					-webkit-backface-visibility: hidden;
 				}
 			}
 
@@ -574,6 +644,7 @@ body {
 				left: 0;
 				right: 0;
 				bottom: 0;
+				z-index: 300;
 			}
 			.tooltip {
 				position: absolute;
@@ -590,35 +661,27 @@ body {
 					.circle {
 						@include opacity(0);
 					}
-					.content {
-						display: block;
-					}
-				}
 
-
-
-				&.enter {
 					.tooltip-btn {
-						@include opacity(0);
-						@include animation(fade-out 0.3s ease);
-					}
-
-					.circle {
-						display: block;
-						@include opacity(1);
-						@include animation(fade-in 0.3s ease);
-					}
-				}
-
-				&.ready {
-					.tooltip-btn {
-						@include opacity(0);
 						display: none;
 					}
 
 					.circle {
 						display: block;
 						@include opacity(1);
+						@include animation(fade-in 1s ease);
+					}
+
+					.content {
+						display: block;
+						@include opacity(1);
+						@include animation(fade-in 0.5s ease, bounce-in 0.5s ease);
+					}
+				}
+
+				&.enter {
+					.tooltip-btn {
+						display: none;
 					}
 				}
 
@@ -632,6 +695,7 @@ body {
 					left: 0;
 					margin: -75px 0 0 -75px;
 					display: none;
+					background-image: url(../images/misc/hightlights.jpg);
 				}
 
 				.tooltip-btn {
@@ -639,19 +703,29 @@ body {
 					top: 30px;
 					left: -20px;
 					@include transition(none);
+
+					@include device-width(mobile) {
+						display: none;
+					}
 				}
 				.content {
 					display: none;
+					@include opacity(0);
 					width: 300px;
 					position: absolute;
-					top: 50%;
-					left: 50%;
+					top: 0;
+					left: 0;
 					margin: 110px 0 0 -150px;
 					background: #FFF;
 					background: rgba(#FFF, 0.95);
 					padding: 15px 20px;
 					@include border-radius(10px);
 					@include box-sizing(border-box);
+
+					@include device-width(mobile) {
+						width: 250px;
+						margin-left: -125px;
+					}
 					&:before {
 						content: '';
 						position: absolute;
@@ -673,6 +747,70 @@ body {
 						margin: -15px -15px 0 0;
 					}
 				}
+			}
+
+			.content {
+				padding: 20px 100px;
+				@include device-width(mobile) {
+					padding: 20px 10px;
+				}
+			}
+
+			&.home {
+				.content {
+					position: absolute;
+					z-index: 400;
+					padding: 20px 30px;
+
+					@include device-width(mobile) {
+						padding: 5px 40px 5px 15px;
+					}
+				}
+			}
+		}
+	}
+
+	.info {
+		display: none;
+		z-index: 500;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: #000;
+		background: rgba(#000, 0.5);
+		padding: 200px 0;
+
+		&.active {
+			display: block;
+			opacity: 1;
+			@include animation(fade-in 0.5s ease);
+		}
+
+		.content {
+			display: none;
+			@include border-radius(5px);
+			margin: 0 auto;
+			width: 300px;
+			background: #FFF;
+			padding: 15px 20px;
+			position: relative;
+
+			@include device-width(mobile) {
+				width: 250px;
+				padding: 10px 15px;
+			}
+
+
+			&.active {
+				display: block;
+				@include animation(bounce-in 0.5s ease);
+			}
+			.close-btn {
+				position: absolute;
+				top: -16px;
+				right: -16px;
 			}
 		}
 	}
