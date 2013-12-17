@@ -19,6 +19,22 @@
                 };
             })();
 
+            Modernizr.addTest('ipad', function () {
+                return !!navigator.userAgent.match(/iPad/i);
+            });
+
+            Modernizr.addTest('iphone', function () {
+                return !!navigator.userAgent.match(/iPhone/i);
+            });
+
+            Modernizr.addTest('ipod', function () {
+                return !!navigator.userAgent.match(/iPod/i);
+            });
+
+            Modernizr.addTest('ios', function () {
+                return (Modernizr.ipad || Modernizr.ipod || Modernizr.iphone);
+            });
+
             this.sections.init();
             this.tooltips.init();
             this.navigations.init();
@@ -42,7 +58,9 @@
                 
                 sections.section.on('enter.section', function(e){
                     var section = sections.section.filter(this),
-                        id = section.data('id');
+                        id = section.data('id'),
+                        floorId = Number(String(id).charAt(0)) * 100;
+                    
 
                     if(!Modernizr.cssanimations) {
                         section.fadeIn(function(){
@@ -58,8 +76,7 @@
                     navigations.goto(id);
                     plugin.element.addClass('section-'+id);
                     sections.btn.removeClass('selected');
-                    sections.btn.filter('[data-id='+id+']').addClass('selected');
-                    
+                    sections.btn.filter('[data-id='+id+'], [data-id='+floorId+']').addClass('selected');
                 }).on('ready.section', function(e){
                     var section = sections.section.filter(this),
                         id = section.data('id');
@@ -110,7 +127,7 @@
                     section.removeClass('current leave zoom-in zoom-out');
 
                     if(tooltip.hasClass('current')){
-                        tooltip.trigger('leave');
+                        tooltip.trigger('leave.tooltip');
                     }
                 }).on('zoom-in.section', function(e){
                     var section = sections.section.filter(this);
@@ -132,21 +149,21 @@
                         });
                     }
                 }).on('move.section', function(e){
-                    var section = sections.section.filter(this),
-                        move = section.data('move'),
-                        currX = move.currX,
-                        mask = move.mask,
-                        mousePercentageX = parseInt(((sections.mouseX - mask.offset().left) / move.maskWidth) * 100),
-                        newPosX = parseFloat(-(move.elementWidth - move.maskWidth) * (mousePercentageX / 100)),
-                        newPosX = ((newPosX - currX) * 0.05) + currX;
+                    // var section = sections.section.filter(this),
+                    //     move = section.data('move'),
+                    //     currX = move.currX,
+                    //     mask = move.mask,
+                    //     mousePercentageX = parseInt(((sections.mouseX - mask.offset().left) / move.maskWidth) * 100),
+                    //     newPosX = parseFloat(-(move.elementWidth - move.maskWidth) * (mousePercentageX / 100)),
+                    //     newPosX = ((newPosX - currX) * 0.05) + currX;
                     
-                    move.element.css('left', newPosX+'px');
-                    move.currX = newPosX;
-                    move.animationFrame = requestAnimationFrame(function(){
-                        section.trigger('move.section');
-                    });
+                    // move.element.css('left', newPosX+'px');
+                    // move.currX = newPosX;
+                    // move.animationFrame = requestAnimationFrame(function(){
+                    //     section.trigger('move.section');
+                    // });
 
-                    section.data('move', move);
+                    // section.data('move', move);
                 }).on('mouseenter', function(){
                     var section = sections.section.filter(this),
                         move = section.data('move');
@@ -351,9 +368,7 @@
                     if(currNavigation.length){
                         currNavigation.removeClass('current');
                     }
-                } else {
-                    //navigations.navigation.removeClass('current');
-                }
+                } 
             }
         };
 
@@ -364,11 +379,6 @@
                 infos.container = $('> .info', plugin.element);
                 infos.content = $('.content', infos.container);
 
-                // sections.section.on('ready.section', function(){
-                //     var section = $(this),
-                //         id = section.data('id');
-
-                // });
 
                 $('.info-btn', plugin.element).on('click', function(){
                     infos.open();
@@ -403,7 +413,7 @@
 
         this.methods = {
             scrollTop: function(){
-                if(Modernizr.mq('(max-height: 600px) and (max-width: 600px)')) {
+                if(Modernizr.mq('(max-width: 600px)')) {
                     $('html, body').animate({scrollTop: plugin.element.offset().top});
                 }
             }
@@ -411,7 +421,6 @@
 
         this.init();
     }
-
   
     $.fn[ pluginName ] = function ( options ) {
         return this.each(function() {

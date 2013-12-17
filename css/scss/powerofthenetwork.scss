@@ -1,5 +1,3 @@
-@import "compass/css3";
-@import "buttons";
 
 @mixin device-width($device){
 	$width: 1000;
@@ -18,6 +16,10 @@
 	}
 }
 
+@import "compass/css3";
+@import "buttons";
+
+
 @font-face {
 	font-family: 'icons';
 	src:url('fonts/icons.eot');
@@ -29,35 +31,58 @@
 	font-style: normal;
 }
 
-@font-face {
-    font-family: 'CircularStdBookRegular';
-    src: url('fonts/circularstd-book.eot');
-    src: url('fonts/circularstd-book.eot') format('embedded-opentype'),
-         url('fonts/circularstd-book.woff') format('woff'),
-         url('fonts/circularstd-book.ttf') format('truetype'),
-         url('fonts/circularstd-book.svg#CircularStdBookRegular') format('svg');
-}
+// @font-face {
+//     font-family: 'CircularStdBookRegular';
+//     src: url('fonts/circularstd-book.eot');
+//     src: url('fonts/circularstd-book.eot') format('embedded-opentype'),
+//          url('fonts/circularstd-book.woff') format('woff'),
+//          url('fonts/circularstd-book.ttf') format('truetype'),
+//          url('fonts/circularstd-book.svg#CircularStdBookRegular') format('svg');
+// }
 
-@font-face {
-    font-family: 'CircularStdBoldRegular';
-    src: url('fonts/circularstd-bold.eot');
-    src: url('fonts/circularstd-bold.eot') format('embedded-opentype'),
-         url('fonts/circularstd-bold.woff') format('woff'),
-         url('fonts/circularstd-bold.ttf') format('truetype'),
-         url('fonts/circularstd-bold.svg#CircularStdBoldRegular') format('svg');
-}
+// @font-face {
+//     font-family: 'CircularStdBoldRegular';
+//     src: url('fonts/circularstd-bold.eot');
+//     src: url('fonts/circularstd-bold.eot') format('embedded-opentype'),
+//          url('fonts/circularstd-bold.woff') format('woff'),
+//          url('fonts/circularstd-bold.ttf') format('truetype'),
+//          url('fonts/circularstd-bold.svg#CircularStdBoldRegular') format('svg');
+// }
+
+// @media screen and (-webkit-min-device-pixel-ratio:0) {
+// 	@font-face {
+// 		font-family: 'CircularStdBookRegular';
+// 		src: url('fonts/circularstd-book.svg#CircularStdBookRegular') format('svg');
+// 	}
+
+// 	@font-face {
+// 		font-family: 'CircularStdBoldRegular';
+// 		src: url('fonts/circularstd-bold.svg#CircularStdBoldRegular') format('svg');
+// 	}
+// }
 
 @mixin circular-book(){
 	font-family: 'CircularStdBookRegular', sans-serif;
 	font-weight: normal;
 	font-style: normal;
+	//-webkit-text-stroke: 0.3px;
 }
 
 @mixin circular-bold(){
 	font-family: 'CircularStdBoldRegular', sans-serif;	
 	font-weight: normal;
 	font-style: normal;
+	//-webkit-text-stroke: 0.3px;
+}
 
+@mixin arial(){
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+	font-weight: normal;
+}
+
+@mixin arial-bold(){
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+	font-weight: bold;
 }
 
 
@@ -130,13 +155,23 @@
 	}
 }
 
-@include keyframes('bounce-in') {
+@include keyframes('move-down') {
 	0% {
 		margin-top: -20px;
 	}
 
 	100% {
 		margin-top: 0;
+	}
+}
+
+@include keyframes('move-up') {
+	0% {
+		margin-bottom: -20px;
+	}
+
+	100% {
+		margin-bottom: 0;
 	}
 }
 
@@ -162,6 +197,7 @@
 
 
 
+
 body {
 	background: #e2e2e2;
 	margin: 0;
@@ -169,8 +205,18 @@ body {
 	font-size: 12px;
 }
 
+#main {
+    width: 820px;
+    margin: 0 auto;
+}
+
+.touch #main {
+    max-width: 820px;
+	width: auto;
+}
+
 #powerofthenetwork {
-	@include circular-book;
+	@include arial;
 	background: #FFF;
 	color: #666666;
 	position: relative;
@@ -181,7 +227,8 @@ body {
 	line-height: 1.3;
 	overflow: hidden;
 
-
+	//-webkit-font-smoothing: antialiased;
+	
 	// Typography
 
 	h1, h2, h3, h4, h5, h6 {
@@ -192,31 +239,32 @@ body {
 	}
 
 	h2 {
-		@include circular-bold;
-		font-size: 30px;
+		@include arial-bold;
+		font-size: 32px;
 		margin: 10px 0;
-
-		@include device-width(mobile) {
-			.touch & {
-				font-size: 20px;
-			}
-		}
 	}
 
 	h3 {
-		@include circular-bold;
-		font-size: 25px;
+		@include arial-bold;
+		font-size: 24px;
 		margin: 10px 0;
+
+		// @include device-width(mobile) {
+		// 	.touch & {
+		// 		font-size: 30px;
+		// 		line-height: 1.2;
+		// 	}
+		// }
 	}
 
 	h4 {
-		font-size: 20px;
+		font-size: 18px;
 		margin: 5px 0;
 		line-height: 1.2;
 	}
 
 	h5 {
-		font-size: 18px;
+		font-size: 16px;
 		margin: 10px 0;
 
 		@include device-width(mobile) {
@@ -233,7 +281,7 @@ body {
 	}
 
 	b, strong {
-		@include circular-bold;
+		@include arial-bold;
 	}
 
 	.italic {
@@ -252,13 +300,19 @@ body {
 		color: #323232;
 	}
 
+	.black {
+		color: #000000;
+	}
+
 	
 	a {
 		cursor: pointer;
 		@include transition(all 0.3s ease);
 	}
 
-	
+	sup {
+		line-height: 1;
+	}
 
 	// Icons
 	[class^="icon-"], [class*=" icon-"] {
@@ -330,7 +384,7 @@ body {
 	}
 
 	.btn {
-		@include circular-bold;
+		@include arial-bold;
 		text-align: left;
 		position: relative;
 		@include transition(all 0.3s ease);
@@ -359,13 +413,19 @@ body {
 			text-align: center;
 			overflow: hidden;
 			
+			@include device-width(mobile) {
+			    .touch & {
+				    font-size: 18px;
+				    line-height: 50px;
+			    }
+			}
 			img {
 				max-width: 100%;
 				height: auto;
 			}
 
 			&.number {
-				@include circular-bold;
+				@include arial-bold;
 				font-size: 14px;
 
 				&:before {
@@ -381,12 +441,6 @@ body {
 					margin: -10px 0 0 -10px; 
 				}
 			}
-
-			&.icon-home {
-				height: 99%;
-				font-size: 18px;
-				line-height: 28px;
-			}
 		}
 	}
 
@@ -395,7 +449,6 @@ body {
 		//@include box-shadow(1px 1px 1px rgba(#000, 0.5));
 		padding: 0;
 		//background: #c20000;
-		border: 2px solid #FFF;
 		display: inline-block;
 		@include border-radius(50%);
 		width: 40px;
@@ -403,7 +456,7 @@ body {
 		line-height: 40px;
 		text-align: center;
 		color: #FFF;
-		@include circular-book;
+		@include arial;
 		font-size: 18px;
 
 		@include device-width(tablet) {
@@ -424,38 +477,31 @@ body {
 	}
 
 
-	.home-btn {
-		display: inline-block;
-		font-size: 20px;
-		&:before {
-			@extend [class^="icon-"];
-			@extend .icon-home:before;
-		}
-	}
 
 	.info-btn {
 		display: inline-block;
-		font-size: 20px;
+		font-size: 18px;
+		width: 34px;
+		height: 34px;
+		line-height: 34px;
 		&:before {
 			@extend [class^="icon-"];
 			@extend .icon-info:before;
+			line-height: 34px;
 		}
 
 	}
 
 	.close-btn {
 		border: none;
-		line-height: 26px;
-		font-size: 24px;
+		line-height: 30px;
+		font-size: 25px;
 		width: 30px;
 		height: 30px;
 		&:before {
 			content: '\00D7';
-			margin: 0;
+			margin: 0 0 0 1px;
 			padding: 0;
-		}
-
-		.lt-ie9 & {
 			line-height: 30px;
 		}
 
@@ -573,10 +619,30 @@ body {
 
 		.home-btn {
 			left: 10px;
+			display: inline-block;
+			font-size: 20px;
+			&:before {
+				@extend [class^="icon-"];
+				@extend .icon-home:before;
+				line-height: 36px;
+
+				@include device-width(tablet) {
+					line-height: 28px;
+				}
+			}
 		}
 
 		.info-btn {
 			right: 10px;
+
+			@include device-width(mobile) {
+				.touch & {
+					&:before {
+						line-height: 30px;
+						margin-left: 1px;
+					}
+				}
+			}
 		}
 	}
 
@@ -623,19 +689,20 @@ body {
 
 					@include device-width(tablet) {
 						.touch & {
-							@include scale(2);
-							@include animation(zoom-in 0.5s ease);
-						}
+							// @include scale(2);
+							// @include animation(zoom-in 0.5s ease);
+						
 
-						&:after {
-							position: absolute;
-							content: '';
-							top: 0;
-							left: 0;
-							right: 0;
-							bottom: 0;
-							background: rgba(#000, 0.6);
-							z-index: 100;
+							&:after {
+								position: absolute;
+								content: '';
+								top: 0;
+								left: 0;
+								right: 0;
+								bottom: 0;
+								background: rgba(#000, 0.6);
+								z-index: 100;
+							}
 						}
 					}
 				}
@@ -686,8 +753,8 @@ body {
 				.image {
 					@include device-width(tablet) {
 						.touch & {
-							@include scale(1);
-							@include animation(zoom-out 0.3s ease);
+							// @include scale(1);
+							// @include animation(zoom-out 0.3s ease);
 						}
 					}
 				}
@@ -801,7 +868,6 @@ body {
 				display: block;
 				visibility: visible;
 				padding: 0;
-				font-size: 12px;
 				@include opacity(1);
 				&.current {
 					@include device-width(tablet) {
@@ -842,7 +908,11 @@ body {
 					.content {
 						display: block;
 						@include opacity(1);
-						@include animation(fade-in 0.5s ease, bounce-in 0.5s ease);
+						@include animation(fade-in 0.5s ease, move-down 0.5s ease);
+
+						&.above {
+							@include animation(fade-in 0.5s ease, move-up 0.5s ease);
+						}
 					}
 				}
 
@@ -873,7 +943,7 @@ body {
 					@include transition(none);
 					background: none;
 					text-indent: -9999px;
-					border-color: #FF0000;
+					border: 2px solid #FF0000;
 					@include device-width(tablet) {
 						.touch & {
 							text-indent: 0;
@@ -895,7 +965,7 @@ body {
 
 						&:before,
 						&:after {
-							display: none;
+							visibility: hidden;
 						}
 					}
 
@@ -955,6 +1025,15 @@ body {
 							display: none;
 						}
 					}
+
+					.ios & {
+						text-indent: 0;
+						@include background(linear-gradient(#FF0000,#EE0000));
+						border-color: #FFF;
+						&:hover {
+							@include background(linear-gradient(#EE0000,#FF0000));
+						}
+					}
 				}
 
 				.content {
@@ -973,8 +1052,14 @@ body {
 
 					@include device-width(mobile) {
 						.touch & {
-							width: 250px;
-							margin-left: -125px;
+							font-size: 14px;
+							width: 260px;
+							margin-left: -130px;
+							padding: 20px;
+
+							p {
+								line-height: 18px;
+							}
 						}
 					}
 
@@ -1171,13 +1256,30 @@ body {
 					}
 
 					.title {
+						//font-size: 24px;
+						margin: 20px 0;
+						letter-spacing: 0;
+						// .welcome {
+						// 	font-size: 32px;
+						// }
+
+						.welcome,
+						.home {
+							margin: 0;
+						} 
+
 						@include device-width(mobile) {
 							.touch & {
-								font-size: 15px;
-
 								.welcome {
 									font-size: 20px;
 								}
+
+								.home {
+									font-size: 16px;
+								}
+								// .welcome {
+								// 	//font-size: 20px;
+								// }
 							}
 						}
 					}
@@ -1188,13 +1290,25 @@ body {
 				}
 
 				.image-container {
-					margin-top: -40px;
+					margin-top: -160px;
+					margin-bottom: 20px;
 					position: relative;
 					z-index: 300;
+					left: 80px;
+
+					@include device-width(tablet) {
+						.touch & {
+							margin-top: -40px;
+							left: 0;
+							width: 400px !important;
+						}
+					}
 
 					@include device-width(mobile) {
 						.touch & {
+							margin-bottom: 0;
 							margin-top: -30px;
+							width: 80% !important;
 						}
 					}
 				}
@@ -1204,6 +1318,9 @@ body {
 				.content {
 					z-index: 400;
 					padding: 20px;
+					.title {
+						margin-top: 20px
+					}
 				}
 			}
 		}
@@ -1247,7 +1364,7 @@ body {
 
 			&.active {
 				display: block;
-				@include animation(bounce-in 0.5s ease);
+				@include animation(move-down 0.5s ease);
 			}
 			.close-btn {
 				position: absolute;
@@ -1261,10 +1378,24 @@ body {
 		position: relative;
 		z-index: 100;
 		display: block;
+		padding: 20px 0;
 
 		@include device-width(tablet) {
 			.touch & {
+				padding-top: 18px;
+				padding-bottom: 18px;
 				background: #e2e2e2;
+			}
+		}
+
+		.info-btn {
+			position: absolute;
+			top: 20px;
+			right: 20px;
+			@include device-width(tablet) {
+				.touch & {
+					display: none;
+				}
 			}
 		}
 		.section-navigation-container {
@@ -1278,7 +1409,7 @@ body {
 
 			.section-navigation {
 				display: none;
-				padding: 10px;
+				padding: 0 30px;
 				&.current {
 					display: block;
 				}
@@ -1288,7 +1419,7 @@ body {
 			
 			@include device-width(tablet) {
 				.touch & {
-					padding: 10px;
+					padding: 0 30px;
 				}
 			}
 			.title {
@@ -1302,34 +1433,14 @@ body {
 			}
 		}
 
-		.home-btn,
-		.info-btn {
-			position: absolute;
-			top: 5px;
-			@include device-width(tablet) {
-				.touch & {
-					display: none;
-				}
-			}
-		}
-
-		.home-btn {
-			left: 20px;
-		}
-
-		.info-btn {
-			right: 20px;
-		}
-
+		
 		.navigation {
 			text-align: center;
 			display: block;
 			ul {
-				display: inline-block;
 				list-style: none;
 				padding: 0;
 				margin: 0;
-				text-align: center;
 
 				@include device-width(tablet) {
 					.touch & {
@@ -1339,16 +1450,14 @@ body {
 				}
 
 				li {
-					margin: 10px 0.6em;
+					margin: 0 0 0 20px;
 					float: left;
-					width: 160px;
 
 					@include device-width(tablet) {
 						.touch & {
 							float: none;
 							width: auto;
-							margin-top: 1.2em;
-							margin-bottom: 1.2em;
+							margin: 15px 0;
 						}
 					}
 
