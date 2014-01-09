@@ -55,18 +55,17 @@
                 sections.currId = 0;
                 sections.firstRun = true;
                 sections.btn = $('.section-btn', plugin.element);
-                
+
                 sections.section.on('enter.section', function(e){
                     var section = sections.section.filter(this),
                         id = section.data('id'),
                         floorId = Number(String(id).charAt(0)) * 100;
                     
-
                     if(!Modernizr.cssanimations) {
-                        section.fadeIn(function(){
+                        //section.fadeIn(function(){
                             section.addClass('current');
                             section.trigger('ready.section');
-                        });
+                        //});
                     } else {
                         section.addClass('current enter');
                         section.one('webkitAnimationEnd oanimationend msAnimationEnd animationend', function(){
@@ -103,10 +102,12 @@
                 }).on('leave.section', function(e){
                     var section = sections.section.filter(this),
                         move = section.data('move');
+
                     if(!Modernizr.cssanimations) {
-                        section.fadeOut(function(){
+                        //section.fadeOut(function(){
+                            section.removeClass('enter ready');
                             section.trigger('exit.section');
-                        });
+                        //});
                     } else {
                         section.one('webkitAnimationEnd oanimationend msAnimationEnd animationend', function(){
                             section.trigger('exit.section');
@@ -115,7 +116,7 @@
                     }
 
                     if(move){
-                        cancelAnimationFrame(move.animationFrame);
+                    //   cancelAnimationFrame(move.animationFrame);
                     }
                     
                 }).on('exit.section', function(e){
@@ -124,7 +125,7 @@
                         tooltip = tooltips.current();
 
                     plugin.element.removeClass('section-'+id);
-                    section.removeClass('current leave zoom-in zoom-out');
+                    section.removeClass('current enter ready leave zoom-in zoom-out blur-in');
 
                     if(tooltip.hasClass('current')){
                         tooltip.trigger('leave.tooltip');
@@ -180,7 +181,7 @@
                         move = section.data('move');
 
                     if(move){
-                        cancelAnimationFrame(move.animationFrame);
+                    //    cancelAnimationFrame(move.animationFrame);
                     }
                 }).on('mousemove', function(e){
                     sections.mouseX = e.pageX;
@@ -218,13 +219,14 @@
                     newSection = sections.section.filter('[data-id=' + id + ']');
 
                     if(sections.firstRun){
-                        newSection.trigger('enter');
+                        newSection.trigger('enter.section');
                     } else {
                         currSection = sections.section.filter('[data-id=' + currId + ']');
                         currSection.one('exit.section', function(){
                             newSection.trigger('enter.section');
                         });
                         currSection.trigger('leave.section');
+
                     }
 
                     plugin.methods.scrollTop();
