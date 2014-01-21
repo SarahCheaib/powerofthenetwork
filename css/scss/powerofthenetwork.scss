@@ -394,6 +394,15 @@ body {
 			line-height: 32px;
 			text-align: center;
 			overflow: hidden;
+
+
+			@media only screen
+				and (min-device-width : 320px)
+				and (max-device-width : 568px) 
+				and (orientation : landscape) {
+				   
+				 line-height: 47px;
+			}			
 			
 			@include device-width(mobile) {
 			    .touch & {
@@ -410,6 +419,14 @@ body {
 				@include arial-bold;
 				font-size: 14px;
 
+				@media only screen
+					and (min-device-width : 320px)
+					and (max-device-width : 568px) 
+					and (orientation : landscape) {
+					   
+					  padding-top: 2px;
+				}				
+
 				&:before {
 					content: '';
 					border: 2px solid #FFF;
@@ -420,7 +437,7 @@ body {
 					top: 50%;
 					left: 50%;
 					@include border-radius(50%);
-					margin: -10px 0 0 -10px; 
+					margin: -10px 0 0 -10px;					
 				}
 			}
 		}
