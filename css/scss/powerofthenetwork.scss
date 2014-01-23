@@ -1140,8 +1140,8 @@ body {
 
 					.touch & {
 						p {
-							line-height: 18px;
-							font-size: 14px;
+							// line-height: 16px;
+							// font-size: 13px;
 						}
 					}
 					
@@ -1150,6 +1150,10 @@ body {
 							width: 260px;
 							margin-left: -130px;
 							padding: 20px;
+							p {
+								line-height: 18px;
+								font-size: 14px;
+							}
 						}
 					}
 
