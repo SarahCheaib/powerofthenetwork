@@ -400,8 +400,7 @@ body {
 				and (min-device-width : 320px)
 				and (max-device-width : 568px) 
 				and (orientation : landscape) {
-				   
-				 line-height: 47px;
+				line-height: 34px;
 			}			
 			
 			@include device-width(mobile) {
@@ -417,15 +416,7 @@ body {
 
 			&.number {
 				@include arial-bold;
-				font-size: 14px;
-
-				@media only screen
-					and (min-device-width : 320px)
-					and (max-device-width : 568px) 
-					and (orientation : landscape) {
-					   
-					  padding-top: 2px;
-				}				
+				font-size: 14px;			
 
 				&:before {
 					content: '';
@@ -1070,6 +1061,7 @@ body {
 						@include border-radius(50%);
 
 						.touch & {
+							background: none;
 							display: none;
 						}
 					}

@@ -228,7 +228,6 @@
                         currSection.trigger('leave.section');
 
                     }
-
                     plugin.methods.scrollTop();
                 }
             },
@@ -311,7 +310,7 @@
                         newTooltip.trigger('enter.tooltip');
                     }
 
-                    plugin.methods.scrollTop();
+                    plugin.methods.scrollTo(newTooltip.offset().top - 100);
                     tooltips.currId = id;
                 } else {
                     tooltips.close();
@@ -417,6 +416,11 @@
             scrollTop: function(){
                 if(Modernizr.mq('(max-width: 600px)')) {
                     $('html, body').animate({scrollTop: plugin.element.offset().top});
+                }
+            },
+            scrollTo: function(position){
+                if(Modernizr.mq('(max-width: 600px)')) {
+                    $('html, body').animate({scrollTop: position});
                 }
             }
         }
